@@ -1,0 +1,183 @@
+{
+  "primary": {
+    "50": "#e8f2f7",
+    "100": "#d1e5ef",
+    "200": "#a3cbe0",
+    "300": "#75b1d0",
+    "400": "#0668a8",
+    "500": "#044778",
+    "600": "#033a61",
+    "700": "#032d4a",
+    "800": "#022033",
+    "900": "#01131c"
+  },
+  "secondary": {
+    "50": "#fff4e6",
+    "100": "#ffe9cc",
+    "200": "#ffd399",
+    "300": "#ffbd66",
+    "400": "#ffa033",
+    "500": "#fc8320",
+    "600": "#e6761d",
+    "700": "#b35b17",
+    "800": "#804011",
+    "900": "#4d260a"
+  },
+  "accent": {
+    "blue": "#044778",
+    "indigo": "#044778",
+    "purple": "#6f42c1",
+    "pink": "#e83e8c",
+    "red": "#dc3545",
+    "orange": "#fc8320",
+    "yellow": "#ffc107",
+    "green": "#79C37B",
+    "teal": "#20c997",
+    "cyan": "#044778"
+  },
+  "neutral": {
+    "white": "#ffffff",
+    "black": "#000000",
+    "gray": {
+      "50": "#f8f9fa",
+      "100": "#e9ecef",
+      "200": "#dee2e6",
+      "300": "#ced4da",
+      "400": "#adb5bd",
+      "500": "#6c757d",
+      "600": "#666666",
+      "700": "#495057",
+      "800": "#343a40",
+      "900": "#1a1a1a"
+    }
+  },
+  "background": {
+    "primary": "#ffffff",
+    "secondary": "#e8f2f7",
+    "dark": "#044778",
+    "gradient": {
+      "hero": "linear-gradient(135deg, #04477842 0%, #044778 100%)",
+      "card": "linear-gradient(135deg, #ffffff 0%, #e8f2f7 100%)",
+      "overlay": "rgba(4, 71, 120, 0.1)"
+    }
+  },
+  "text": {
+    "primary": "#044778",
+    "secondary": "#4b5563",
+    "muted": "#6b7280",
+    "light": "#ffffff",
+    "inverse": "#ffffff"
+  },
+  "border": {
+    "light": "#e5e7eb",
+    "medium": "#d1d5db",
+    "dark": "#9ca3af",
+    "primary": "#044778"
+  },
+  "status": {
+    "success": "#79C37B",
+    "warning": "#fc8320",
+    "error": "#dc3545",
+    "info": "#044778"
+  },
+  "interactive": {
+    "primary": {
+      "default": "#044778",
+      "hover": "#0668a8",
+      "active": "#033a61",
+      "disabled": "#6b7280"
+    },
+    "secondary": {
+      "default": "#fc8320",
+      "hover": "#ffa033",
+      "active": "#e6761d",
+      "disabled": "#d1d5db"
+    },
+    "accent": {
+      "default": "#79C37B",
+      "hover": "#16a34a",
+      "active": "#15803d",
+      "disabled": "#6b7280"
+    }
+  },
+  "shadows": {
+    "sm": "0 1px 2px rgba(4, 71, 120, 0.05)",
+    "md": "0 4px 6px rgba(4, 71, 120, 0.1)",
+    "lg": "0 10px 15px rgba(4, 71, 120, 0.1)",
+    "xl": "0 20px 25px rgba(4, 71, 120, 0.1)",
+    "card": "0 10px 30px rgba(4, 71, 120, 0.1)",
+    "button": "0 2px 4px rgba(4, 71, 120, 0.1)"
+  },
+  "opacity": {
+    "10": "0.1",
+    "15": "0.15",
+    "20": "0.2",
+    "25": "0.25",
+    "50": "0.5",
+    "75": "0.75",
+    "80": "0.8",
+    "90": "0.9"
+  },
+  "themes": {
+    "light": {
+      "name": "Light Theme",
+      "background": {
+        "primary": "#ffffff",
+        "secondary": "#e8f2f7"
+      },
+      "text": {
+        "primary": "#044778",
+        "secondary": "#4b5563"
+      },
+      "accent": "#044778"
+    },
+    "dark": {
+      "name": "Dark Theme",
+      "background": {
+        "primary": "#022033",
+        "secondary": "#01131c"
+      },
+      "text": {
+        "primary": "#ffffff",
+        "secondary": "#e5e7eb"
+      },
+      "accent": "#fc8320"
+    },
+    "blue": {
+      "name": "Blue Theme",
+      "background": {
+        "primary": "#ffffff",
+        "secondary": "#e8f2f7"
+      },
+      "text": {
+        "primary": "#044778",
+        "secondary": "#4b5563"
+      },
+      "accent": "#044778"
+    },
+    "green": {
+      "name": "Green Theme",
+      "background": {
+        "primary": "#ffffff",
+        "secondary": "#f0fdf4"
+      },
+      "text": {
+        "primary": "#044778",
+        "secondary": "#4b5563"
+      },
+      "accent": "#79C37B"
+    },
+    "orange": {
+      "name": "Orange Theme",
+      "background": {
+        "primary": "#ffffff",
+        "secondary": "#fff4e6"
+      },
+      "text": {
+        "primary": "#044778",
+        "secondary": "#4b5563"
+      },
+      "accent": "#fc8320"
+    }
+  }
+}

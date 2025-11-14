@@ -1,0 +1,60 @@
+{
+  "images": {
+    "jobImages": {
+      "personal-care-assistant-full-time": "https://res.cloudinary.com/dvauarkh6/image/upload/v1757651528/istockphoto-2047480956-612x612_ghepml.jpg",
+      "personal-care-assistant-part-time": "https://res.cloudinary.com/dvauarkh6/image/upload/v1757651526/istockphoto-2197953344-612x612_aafwiv.jpg",
+      "personal-care-assistant-weekend": "https://res.cloudinary.com/dvauarkh6/image/upload/v1757651536/istockphoto-2185020253-612x612_ir8lka.jpg"
+    }
+  },
+  "hero": {
+    "badge": "Careers",
+    "title": "Join Our",
+    "titleHighlight": "Home Care Team",
+    "description": "Make a meaningful difference in people's lives while building a rewarding career in home care. We're looking for compassionate, dedicated caregivers to join our growing team in Houston.",
+    "stats": [
+      { "number": "Competitive", "label": "Pay" },
+      { "number": "Flexible", "label": "Scheduling" },
+      { "number": "Full Benefits", "label": "Package Available" }
+    ]
+  },
+  "jobListings": {
+    "title": "Current Openings",
+    "subtitle": "Join our team of dedicated caregivers making a difference in Houston.",
+    "jobs": [
+      {
+        "id": 1,
+        "slug": "home-care-assistant-full-time",
+        "title": "Home Care Assistant",
+        "type": "Full-time",
+        "location": "Houston & Gulf Coast counties",
+        "salary": "Competitive Pay",
+        "posted": "Now Hiring",
+        "description": "Join our compassionate team and make a meaningful difference in the lives of our clients. We're seeking dedicated Home Care Assistants who are passionate about providing exceptional care to seniors and individuals with disabilities in the comfort of their own homes in Houston."
+      },
+      {
+        "id": 2,
+        "slug": "home-care-assistant-part-time",
+        "title": "Home Care Assistant",
+        "type": "Part-time",
+        "location": "Houston & Gulf Coast counties",
+        "salary": "Competitive Pay",
+        "posted": "Now Hiring",
+        "description": "We are seeking compassionate Home Care Assistants to provide professional care in clients' homes in Houston. This position offers the opportunity to build meaningful relationships with clients and their families while delivering high-quality home care services."
+      },
+      {
+        "id": 3,
+        "slug": "home-care-assistant-weekend",
+        "title": "Home Care Assistant",
+        "type": "Weekend Shifts",
+        "location": "Houston & Gulf Coast counties",
+        "salary": "Competitive Pay",
+        "posted": "Now Hiring",
+        "description": "Looking for weekend Home Care Assistants to join our team. Provide essential care and companionship to clients during weekend hours while maintaining a flexible schedule that works for you."
+      }
+    ],
+    "buttons": {
+      "viewDetails": "View Details",
+      "applyNow": "Apply Now"
+    }
+  }
+}

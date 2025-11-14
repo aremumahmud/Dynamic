@@ -1,0 +1,200 @@
+/* CSS Variables for Dynamic Theming */
+/*
+ * Dynamic Care Services Color Palette:
+ * - #044778 (Professional Deep Blue) - Primary color for trust & care
+ * - #fc8320 (Vibrant Orange) - Secondary color for energy & warmth
+ * - #79C37B (Fresh Leaf Green) - Accent color for vitality & care
+ * - #FFFFFF (White) - Clean contrast and backgrounds
+ * - Light grey for balance and neutrality
+ */
+:root {
+  /* Primary Colors - Professional Deep Blue Palette */
+  --color-primary-50: #e8f2f7;
+  --color-primary-100: #d1e5ef;
+  --color-primary-200: #a3cbe0;
+  --color-primary-300: #75b1d0;
+  --color-primary-400: #0668a8;
+  --color-primary-500: #044778;
+  --color-primary-600: #033a61;
+  --color-primary-700: #032d4a;
+  --color-primary-800: #022033;
+  --color-primary-900: #01131c;
+
+  /* Secondary Colors - Vibrant Orange Palette */
+  --color-secondary-50: #fff4e6;
+  --color-secondary-100: #ffe9cc;
+  --color-secondary-200: #ffd399;
+  --color-secondary-300: #ffbd66;
+  --color-secondary-400: #ffa033;
+  --color-secondary-500: #fc8320;
+  --color-secondary-600: #e6761d;
+  --color-secondary-700: #b35b17;
+  --color-secondary-800: #804011;
+  --color-secondary-900: #4d260a;
+
+  /* Accent Colors */
+  --color-accent-blue: #044778;
+  --color-accent-indigo: #044778;
+  --color-accent-purple: #6f42c1;
+  --color-accent-pink: #e83e8c;
+  --color-accent-red: #dc3545;
+  --color-accent-orange: #fc8320;
+  --color-accent-yellow: #fbbf24;
+  --color-accent-green: #79C37B;
+  --color-accent-teal: #3AB7B0;
+  --color-accent-cyan: #044778;
+
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  /* Background Colors */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #f9fafb;
+  --bg-dark: #044778;
+  --bg-gradient-hero: linear-gradient(135deg, #04477842 0%, #044778 100%);
+  --bg-gradient-card: linear-gradient(135deg, #FFFFFF 0%, #e8f2f7 100%);
+  --bg-overlay-parallax: rgb(4, 71, 120);
+  --bg-overlay: rgba(4, 71, 120, 0.1);
+
+  /* Text Colors */
+  --text-primary: #374151;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-light: #FFFFFF;
+  --text-inverse: #FFFFFF;
+
+  /* Border Colors */
+  --border-light: #e5e7eb;
+  --border-medium: #d1d5db;
+  --border-dark: #9ca3af;
+  --border-primary: #044778;
+
+  /* Status Colors */
+  --status-success: #79C37B;
+  --status-warning: #fbbf24;
+  --status-error: #dc3545;
+  --status-info: #044778;
+
+  /* Additional Color Variables for Consistency */
+  --success-color: #79C37B;
+  --success-color-dark: #16a34a;
+  --success-bg: #f0fdf4;
+  --success-border: #79C37B;
+  --success-text: #16a34a;
+  --warning-color: #fc8320;
+  --warning-color-dark: #e6761d;
+  --error-color: #dc3545;
+  --error-color-dark: #b02a37;
+  --accent-primary: #044778;
+  --accent-secondary: #fc8320;
+
+  /* Interactive Colors */
+  --interactive-primary-default: #044778;
+  --interactive-primary-hover: #0668a8;
+  --interactive-primary-active: #033a61;
+  --interactive-primary-disabled: #6b7280;
+
+  --interactive-secondary-default: #fc8320;
+  --interactive-secondary-hover: #ffa033;
+  --interactive-secondary-active: #e6761d;
+  --interactive-secondary-disabled: #d1d5db;
+
+  --interactive-accent-default: #79C37B;
+  --interactive-accent-hover: #16a34a;
+  --interactive-accent-active: #15803d;
+  --interactive-accent-disabled: #6b7280;
+
+  /* Shadow Colors */
+  --shadow-sm: 0 1px 2px rgba(4, 71, 120, 0.05);
+  --shadow-md: 0 4px 6px rgba(4, 71, 120, 0.1);
+  --shadow-lg: 0 10px 15px rgba(4, 71, 120, 0.1);
+  --shadow-xl: 0 20px 25px rgba(4, 71, 120, 0.1);
+  --shadow-card: 0 10px 30px rgba(4, 71, 120, 0.1);
+  --shadow-button: 0 2px 4px rgba(4, 71, 120, 0.1);
+  --shadow-focus: 0 0 0 4px rgba(4, 71, 120, 0.1);
+
+  /* Opacity Values */
+  --opacity-10: 0.1;
+  --opacity-15: 0.15;
+  --opacity-20: 0.2;
+  --opacity-25: 0.25;
+  --opacity-50: 0.5;
+  --opacity-75: 0.75;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+}
+
+/* Theme-specific overrides */
+[data-theme="dark"] {
+  --bg-primary: #022033;
+  --bg-secondary: #01131c;
+  --text-primary: #FFFFFF;
+  --text-secondary: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border-light: #044778;
+  --border-medium: #0668a8;
+  --border-dark: #75b1d0;
+  --interactive-primary-default: #fc8320;
+  --interactive-primary-hover: #ffa033;
+  --interactive-primary-active: #e6761d;
+  --interactive-secondary-default: #044778;
+  --interactive-secondary-hover: #0668a8;
+  --interactive-secondary-active: #033a61;
+}
+
+[data-theme="blue"] {
+  --interactive-accent-default: #044778;
+  --interactive-accent-hover: #0668a8;
+  --interactive-accent-active: #033a61;
+  --color-accent-blue: #044778;
+}
+
+[data-theme="green"] {
+  --interactive-accent-default: #79C37B;
+  --interactive-accent-hover: #16a34a;
+  --interactive-accent-active: #15803d;
+  --color-accent-green: #79C37B;
+}
+
+[data-theme="orange"] {
+  --interactive-accent-default: #fc8320;
+  --interactive-accent-hover: #ffa033;
+  --interactive-accent-active: #e6761d;
+  --color-accent-orange: #fc8320;
+}
+
+/* Utility classes for common color patterns */
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-dark { background-color: var(--bg-dark); }
+.bg-gradient-hero { background: var(--bg-gradient-hero); }
+.bg-gradient-card { background: var(--bg-gradient-card); }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.text-light { color: var(--text-light); }
+.text-inverse { color: var(--text-inverse); }
+
+.border-light { border-color: var(--border-light); }
+.border-medium { border-color: var(--border-medium); }
+.border-dark { border-color: var(--border-dark); }
+.border-primary { border-color: var(--border-primary); }
+
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-card { box-shadow: var(--shadow-card); }
+.shadow-button { box-shadow: var(--shadow-button); }

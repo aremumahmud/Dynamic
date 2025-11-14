@@ -1,0 +1,53 @@
+{
+  "images": {
+    "serviceImages": {
+      "personal-care": "https://res.cloudinary.com/dvauarkh6/image/upload/v1757647571/pexels-kampus-7477691_fbuzpo.jpg",
+      "companion-care": "https://res.cloudinary.com/dvauarkh6/image/upload/v1747917952/pexels-vlada-karpovich-5790702_1_jsorsb.jpg",
+      "respite-care": "https://res.cloudinary.com/dvauarkh6/image/upload/v1757647660/pexels-jsme-mila-523821574-29372742_btuql4.jpg",
+      "in-facility-care": "https://res.cloudinary.com/dvauarkh6/image/upload/v1757648020/pexels-mike-jones-8805864_tpce8a.jpg",
+      "specialized-care": "https://res.cloudinary.com/dvauarkh6/image/upload/v1757648078/pexels-kampus-7551646_mznizh.jpg",
+      "end-of-life-care": "https://res.cloudinary.com/dvauarkh6/image/upload/v1757648473/pexels-liliana-drew-9462344_crre4v.jpg"
+    }
+  },
+  "hero": {
+    "badge": "Our Services",
+    "title": "Dedicated to providing exceptional",
+    "titleHighlight": "home care",
+    "description": "At Dynamic Care Services, we offer a comprehensive range of personalized care services designed to meet your unique needs and enhance your quality of life in the comfort of your own home. Each service is delivered with care, professionalism, and a commitment to improving quality of life.",
+    "stats": [
+      { "number": "6", "label": "Core Services" },
+      { "number": "98%", "label": "Client Satisfaction" },
+      { "number": "100%", "label": "Licensed & Insured" }
+    ]
+  },
+  "serviceDetails": {
+    "whatWeProvide": "Dynamic Care Services provides a variety of home care services tailored to the unique needs of seniors and individuals who need support. Explore more about our services below:",
+    "keyBenefits": "Why Choose Us:",
+    "ctaTitle": "Ready to learn more about our services?",
+    "ctaDescription": "Contact us today at 972-999-8499 or dynamiccare565@gmail.com to schedule your free in-home care consultation. Let us create a personalized care plan for your loved one!",
+    "ctaButton": "Get Started Today"
+  },
+  "contact": {
+    "title": "Get a personalized care plan for you or your loved one!",
+    "contactInfo": [
+      {
+        "icon": "📞",
+        "title": "Call Us",
+        "details": "972-999-8499",
+        "subtitle": "Available during business hours"
+      },
+      {
+        "icon": "📧",
+        "title": "Email Us",
+        "details": "dynamiccare565@gmail.com",
+        "subtitle": "We respond within 24 hours"
+      },
+      {
+        "icon": "📍",
+        "title": "Service Area",
+        "details": "Houston & Gulf Coast counties",
+        "subtitle": "Serving families with excellence across the region."
+      }
+    ]
+  }
+}

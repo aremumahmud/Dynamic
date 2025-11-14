@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultation Request Received - Journey of Care</title>
+    <style type="text/css">
+        /* Email-safe CSS */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+        table {
+            border-collapse: collapse !important;
+        }
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        .header {
+            background-color: #1a1a1a;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            color: #ffffff;
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        .header p {
+            color: #cccccc;
+            font-size: 16px;
+            margin: 0;
+        }
+        .content {
+            padding: 40px 30px;
+            background-color: #ffffff;
+        }
+        .thank-you-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .thank-you-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .thank-you-title {
+            color: #1a1a1a;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+        }
+        .thank-you-text {
+            color: #666666;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0;
+        }
+        .consultation-summary {
+            background-color: #e8f5e8;
+            border-left: 4px solid #28a745;
+            border-radius: 0 8px 8px 0;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .consultation-summary h3 {
+            color: #155724;
+            font-size: 18px;
+            margin: 0 0 15px 0;
+            font-weight: bold;
+        }
+        .summary-item {
+            margin: 10px 0;
+            display: block;
+        }
+        .summary-label {
+            color: #155724;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .summary-value {
+            color: #333333;
+            font-size: 14px;
+        }
+        .timeline-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            border-radius: 0 8px 8px 0;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .timeline-box h3 {
+            color: #856404;
+            font-size: 18px;
+            margin: 0 0 15px 0;
+            font-weight: bold;
+        }
+        .timeline-steps {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .timeline-steps li {
+            color: #333333;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        .preparation-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .preparation-section h3 {
+            color: #1a1a1a;
+            font-size: 18px;
+            margin: 0 0 15px 0;
+            font-weight: bold;
+        }
+        .prep-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .prep-list li {
+            color: #333333;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 8px;
+        }
+        .contact-section {
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .contact-section h3 {
+            color: #1565c0;
+            font-size: 18px;
+            margin: 0 0 15px 0;
+            font-weight: bold;
+        }
+        .contact-info {
+            margin: 15px 0;
+        }
+        .contact-info a {
+            color: #1565c0;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-info p {
+            color: #666666;
+            font-size: 14px;
+            margin: 5px 0 0 0;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer p {
+            color: #cccccc;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+            }
+            .header, .content, .footer {
+                padding: 25px 20px !important;
+            }
+            .header h1 {
+                font-size: 24px !important;
+            }
+            .thank-you-title {
+                font-size: 20px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+            <td>
+                <div class="email-container">
+                    <!-- Header -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td class="header">
+                                <h1>Consultation Request Received</h1>
+                                <p>Journey of Care - Your Care Journey Begins</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- Content -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td class="content">
+                                <!-- Thank You Section -->
+                                <div class="thank-you-section">
+                                    <div class="thank-you-icon">🏥</div>
+                                    <h2 class="thank-you-title">Thank You for Trusting Us</h2>
+                                    <p class="thank-you-text">
+                                        We've received your consultation request and are honored that you're considering Journey of Care for your loved one's needs. Our team is already reviewing your information to prepare for our conversation.
+                                    </p>
+                                </div>
+
+                                <!-- Consultation Summary -->
+                                <div class="consultation-summary">
+                                    <h3>📋 Your Consultation Request</h3>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Submitted:</span>
+                                        <span class="summary-value">[SUBMISSION_DATE]</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Timeline:</span>
+                                        <span class="summary-value">[URGENCY_LEVEL]</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Care Recipient:</span>
+                                        <span class="summary-value">[RECIPIENT_NAME]</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Preferred Start Date:</span>
+                                        <span class="summary-value">[START_DATE]</span>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline -->
+                                <div class="timeline-box">
+                                    <h3>⏰ What to Expect Next</h3>
+                                    <ol class="timeline-steps">
+                                        <li><strong>Within 4 hours:</strong> Our Care Coordinator will call you to schedule your consultation</li>
+                                        <li><strong>Within 24-48 hours:</strong> Free in-home consultation with our licensed team</li>
+                                        <li><strong>Same day:</strong> Receive your personalized care plan and pricing</li>
+                                        <li><strong>Care start:</strong> Begin services as soon as the next business day if needed</li>
+                                    </ol>
+                                </div>
+
+                                <!-- Preparation -->
+                                <div class="preparation-section">
+                                    <h3>📝 How to Prepare for Your Consultation</h3>
+                                    <ul class="prep-list">
+                                        <li>Gather any relevant medical information or medications list</li>
+                                        <li>Think about daily routines and specific care preferences</li>
+                                        <li>Prepare questions about our services and caregivers</li>
+                                        <li>Consider your budget and insurance information</li>
+                                        <li>Have calendar ready to discuss scheduling options</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Contact Section -->
+                                <div class="contact-section">
+                                    <h3>Questions Before Your Consultation?</h3>
+                                    <div class="contact-info">
+                                        <a href="tel:8324460705">(832) 446-0705</a>
+                                        <p>Available 24/7 for urgent needs</p>
+                                    </div>
+                                    <div class="contact-info">
+                                        <a href="mailto:Info@journey-of-care.com">Info@journey-of-care.com</a>
+                                        <p>Our Care Coordinators are standing by</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- Footer -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td class="footer">
+                                <p><strong>Journey of Care</strong></p>
+                                <p>Licensed • Insured • Trusted</p>
+                                <p>Conroe, TX & Surrounding Communities</p>
+                                <p><a href="tel:8324460705">(832) 446-0705</a> | <a href="mailto:Info@journey-of-care.com">Info@journey-of-care.com</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

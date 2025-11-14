@@ -1,0 +1,187 @@
+{
+  "images": {
+    "hero": {
+      "main": "https://res.cloudinary.com/dvauarkh6/image/upload/v1747925848/pexels-cedric-fauntleroy-4266944_vob3wj.jpg"
+    }
+  },
+  "hero": {
+    "badge": "Schedule Care",
+    "title": "Schedule Your",
+    "titleHighlight": "Care Consultation",
+    "description": "Take the first step towards compassionate, professional home care. Complete our scheduling form and we'll arrange a free consultation to discuss your specific needs and create a personalized care plan.",
+    "stats": [
+      { "number": "Free", "label": "Consultation" },
+      { "number": "24hr", "label": "Response Time" },
+      { "number": "Licensed", "label": "Caregivers" }
+    ]
+  },
+  "form": {
+    "steps": [
+      { "number": 1, "title": "Personal Info", "description": "Your contact details" },
+      { "number": 2, "title": "Care Recipient", "description": "Who needs care" },
+      { "number": 3, "title": "Service Details", "description": "Type and schedule" },
+      { "number": 4, "title": "Location & Review", "description": "Final details" }
+    ],
+    "successMessage": {
+      "title": "Consultation Scheduled Successfully!",
+      "description": "Thank you for choosing Dynamic Care Services. We'll contact you within 24 hours to confirm your consultation appointment and discuss your care needs."
+    },
+    "step1": {
+      "title": "Personal Information",
+      "subtitle": "Tell us about yourself so we can contact you about the consultation.",
+      "fields": {
+        "firstName": {
+          "label": "First Name *",
+          "placeholder": "Enter your first name"
+        },
+        "lastName": {
+          "label": "Last Name *",
+          "placeholder": "Enter your last name"
+        },
+        "email": {
+          "label": "Email Address *",
+          "placeholder": "Enter your email address"
+        },
+        "phone": {
+          "label": "Phone Number *",
+          "placeholder": "Enter your phone number"
+        },
+        "relationship": {
+          "label": "Relationship to Care Recipient *",
+          "placeholder": "Select your relationship"
+        }
+      }
+    },
+    "step2": {
+      "title": "Care Recipient Information",
+      "subtitle": "Help us understand who will be receiving care and their specific needs.",
+      "fields": {
+        "recipientName": {
+          "label": "Care Recipient's Name *",
+          "placeholder": "Enter the care recipient's name"
+        },
+        "recipientAge": {
+          "label": "Age *",
+          "placeholder": "Age"
+        },
+        "recipientGender": {
+          "label": "Gender",
+          "placeholder": "Select gender"
+        },
+        "recipientConditions": {
+          "label": "Medical Conditions or Special Needs",
+          "placeholder": "Please describe any medical conditions, mobility issues, cognitive needs, or special requirements...",
+          "note": "This information helps us match you with the most suitable caregiver."
+        }
+      }
+    },
+    "step3": {
+      "title": "Service Details",
+      "subtitle": "Select the services you need and your preferred schedule.",
+      "fields": {
+        "services": {
+          "label": "Services Needed * (Select all that apply)"
+        },
+        "careLevel": {
+          "label": "Level of Care Needed *",
+          "placeholder": "Select care level"
+        },
+        "frequency": {
+          "label": "Frequency *",
+          "placeholder": "Select frequency"
+        },
+        "preferredTime": {
+          "label": "Preferred Time *",
+          "placeholder": "Select preferred time"
+        },
+        "startDate": {
+          "label": "Preferred Start Date"
+        },
+        "urgency": {
+          "label": "How soon do you need care to start? *",
+          "placeholder": "Select urgency"
+        }
+      }
+    },
+    "step4": {
+      "title": "Location & Final Details",
+      "subtitle": "Provide the care location and any additional information.",
+      "fields": {
+        "address": {
+          "label": "Street Address *",
+          "placeholder": "Enter the care location address"
+        },
+        "city": {
+          "label": "City *",
+          "placeholder": "City"
+        },
+        "zipCode": {
+          "label": "ZIP Code",
+          "placeholder": "ZIP Code"
+        },
+        "specialRequests": {
+          "label": "Special Requests or Preferences",
+          "placeholder": "Any specific caregiver preferences, scheduling requirements, or special requests..."
+        },
+        "additionalInfo": {
+          "label": "Additional Information",
+          "placeholder": "Is there anything else you'd like us to know about your care needs or situation?"
+        }
+      }
+    },
+    "options": {
+      "relationship": [
+        { "value": "adult-child", "label": "Adult Child" },
+        { "value": "spouse", "label": "Spouse/Partner" },
+        { "value": "sibling", "label": "Sibling" },
+        { "value": "friend", "label": "Friend" },
+        { "value": "family-member", "label": "Other Family Member" },
+        { "value": "self", "label": "Myself" },
+        { "value": "professional", "label": "Healthcare Professional" },
+        { "value": "other", "label": "Other" }
+      ],
+      "careLevel": [
+        { "value": "light", "label": "Light Care (1-2 hours/day)" },
+        { "value": "moderate", "label": "Moderate Care (3-6 hours/day)" },
+        { "value": "extensive", "label": "Extensive Care (8-12 hours/day)" },
+        { "value": "live-in", "label": "Live-in Care (24 hours)" },
+        { "value": "respite", "label": "Respite Care (Temporary)" }
+      ],
+      "frequency": [
+        { "value": "daily", "label": "Daily" },
+        { "value": "weekdays", "label": "Weekdays Only" },
+        { "value": "weekends", "label": "Weekends Only" },
+        { "value": "few-times-week", "label": "Few Times Per Week" },
+        { "value": "weekly", "label": "Weekly" },
+        { "value": "bi-weekly", "label": "Bi-weekly" },
+        { "value": "monthly", "label": "Monthly" },
+        { "value": "as-needed", "label": "As Needed" }
+      ],
+      "time": [
+        { "value": "morning", "label": "Morning (6AM - 12PM)" },
+        { "value": "afternoon", "label": "Afternoon (12PM - 6PM)" },
+        { "value": "evening", "label": "Evening (6PM - 10PM)" },
+        { "value": "overnight", "label": "Overnight (10PM - 6AM)" },
+        { "value": "flexible", "label": "Flexible" }
+      ],
+      "urgency": [
+        { "value": "immediate", "label": "Immediate (Within 24 hours)" },
+        { "value": "urgent", "label": "Urgent (Within 3 days)" },
+        { "value": "soon", "label": "Soon (Within a week)" },
+        { "value": "flexible", "label": "Flexible (Within a month)" }
+      ],
+      "gender": [
+        { "value": "male", "label": "Male" },
+        { "value": "female", "label": "Female" },
+        { "value": "prefer-not-to-say", "label": "Prefer not to say" }
+      ]
+    },
+    "navigation": {
+      "previous": "← Previous",
+      "next": "Next →",
+      "submit": "Schedule Consultation",
+      "submitting": "Scheduling Consultation..."
+    },
+    "privacyNote": "Your information is secure and will only be used to provide you with care services. We will never share your personal information with third parties without your consent."
+  }
+}

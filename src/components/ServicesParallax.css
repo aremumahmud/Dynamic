@@ -1,0 +1,81 @@
+.services-parallax-spacer {
+  height: 40vh;
+  width: 100%;
+}
+
+.services-parallax-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-overlay-parallax);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.services-parallax-section.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.services-parallax-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.services-parallax-text {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--text-light);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.services-parallax-text .split-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100px) rotateX(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-parallax-spacer {
+    height: 35vh;
+  }
+  
+  .services-parallax-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-parallax-spacer {
+    height: 30vh;
+  }
+  
+  .services-parallax-text {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-parallax-spacer {
+    height: 25vh;
+  }
+  
+  .services-parallax-text {
+    font-size: 2.2rem;
+  }
+  
+  .services-parallax-content {
+    padding: 0 20px;
+  }
+}

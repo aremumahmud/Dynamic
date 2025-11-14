@@ -1,0 +1,141 @@
+.stats-marquee {
+  width: 100%;
+  background-color: var(--bg-dark);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stat-item:nth-child(1) { animation-delay: 0.1s; }
+.stat-item:nth-child(3) { animation-delay: 0.2s; }
+.stat-item:nth-child(5) { animation-delay: 0.3s; }
+.stat-item:nth-child(7) { animation-delay: 0.4s; }
+
+.stat-number1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-light);
+  /* font-family: 'Manrope', sans-serif; */
+  line-height: 1;
+  min-width: fit-content;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+  /* font-family: 'Manrope', sans-serif; */
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--border-medium);
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .stats-container {
+    gap: 30px;
+    padding: 20px 24px;
+  }
+  
+  .stat-number1 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    gap: 20px;
+    padding: 18px 20px;
+  }
+  
+  .stat-number1 {
+    font-size: 1.6rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+  
+  .stat-divider {
+    height: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 30px;
+  }
+  
+  .stat-divider {
+    display: none;
+  }
+  
+  .stat-item {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  .stat-number1 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+    white-space: normal;
+  }
+}

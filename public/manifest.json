@@ -1,0 +1,35 @@
+{
+  "name": "Dynamic Care Services",
+  "short_name": "Dynamic Care",
+  "description": "Professional home care services in Houston & Gulf Coast counties. Compassionate personal care, companion care, respite care, specialized care, and end-of-life care for seniors and individuals with disabilities.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#044778",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["health", "medical", "business"],
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dvauarkh6/image/upload/v1763134507/dynamic-removebg-preview_nuiv3q.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://res.cloudinary.com/dvauarkh6/image/upload/v1763134507/dynamic-removebg-preview_nuiv3q.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://res.cloudinary.com/dvauarkh6/image/upload/v1763134507/dynamic-removebg-preview_nuiv3q.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

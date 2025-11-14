@@ -1,0 +1,180 @@
+{
+  "images": {
+    "hero": {
+      "main": "https://res.cloudinary.com/dvauarkh6/image/upload/v1753007261/pexels-kampus-7551617_2_rilfqn.jpg"
+    }
+  },
+  "hero": {
+    "badge": "Refer Someone",
+    "title": "Share the Gift of",
+    "titleHighlight": "Compassionate Care",
+    "description": "Know someone who could benefit from our exceptional home care services? Your referral could make a meaningful difference in someone's life. Help us extend our compassionate care to more families in need.",
+    "stats": [
+      { "number": "95%", "label": "Referral Satisfaction" },
+      { "number": "24HR", "label": "Response Time" },
+      { "number": "Free", "label": "Initial Assessment" }
+    ]
+  },
+  "whyRefer": {
+    "badge": "Why Refer to Us?",
+    "title": "Trusted Care That Makes a",
+    "titleHighlight": "Difference",
+    "description": "When you refer someone to Dynamic Care Services, you're connecting them with a team that genuinely cares about their wellbeing and independence. Here's what makes our referral program special:",
+    "benefits": [
+      {
+        "icon": "🎁",
+        "title": "Referral Rewards",
+        "description": "Receive a thank you gift for each successful referral that begins service with us."
+      },
+      {
+        "icon": "🏆",
+        "title": "Quality Care Guarantee",
+        "description": "Your referrals receive the same exceptional, compassionate care that you've experienced."
+      },
+      {
+        "icon": "🤝",
+        "title": "Ongoing Support",
+        "description": "We provide continuous support to both you and your referrals throughout their care journey."
+      },
+      {
+        "icon": "⚡",
+        "title": "Fast Response",
+        "description": "Priority scheduling and assessment for all referred clients within 24-48 hours."
+      }
+    ],
+    "imageOverlay": {
+      "mainText": "Licensed & Insured",
+      "subText": "Trusted Care Provider"
+    }
+  },
+  "referralForm": {
+    "title": "Submit a Referral",
+    "subtitle": "Please fill out the information below to refer someone for our care services. All information is kept confidential and secure.",
+    "successMessage": {
+      "title": "Referral Submitted Successfully!",
+      "description": "Thank you for your referral. We'll contact them within 24 hours to discuss their care needs."
+    },
+    "sections": {
+      "yourInformation": {
+        "title": "Your Information",
+        "subtitle": "Tell us who you are so we can thank you properly",
+        "fields": {
+          "referrerName": {
+            "label": "Your Full Name *",
+            "placeholder": "Enter your full name"
+          },
+          "referrerEmail": {
+            "label": "Your Email Address *",
+            "placeholder": "Enter your email"
+          },
+          "referrerPhone": {
+            "label": "Your Phone Number",
+            "placeholder": "Enter your phone number"
+          },
+          "referrerRelation": {
+            "label": "Your Relationship to Client *",
+            "placeholder": "Select relationship"
+          }
+        }
+      },
+      "clientInformation": {
+        "title": "Client Information",
+        "subtitle": "Information about the person who needs care",
+        "fields": {
+          "clientName": {
+            "label": "Client's Full Name *",
+            "placeholder": "Enter client's full name"
+          },
+          "clientPhone": {
+            "label": "Client's Phone Number *",
+            "placeholder": "Enter client's phone number"
+          },
+          "clientEmail": {
+            "label": "Client's Email Address",
+            "placeholder": "Enter client's email (optional)"
+          },
+          "urgency": {
+            "label": "When is Care Needed? *",
+            "placeholder": "Select timeline"
+          },
+          "clientAddress": {
+            "label": "Client's Address",
+            "placeholder": "Enter client's address (City, State)"
+          }
+        }
+      },
+      "careNeeds": {
+        "title": "Care Needs",
+        "subtitle": "Help us understand what type of care is needed",
+        "fields": {
+          "careNeeds": {
+            "label": "Type of Care Needed",
+            "placeholder": "Select care type (optional)"
+          },
+          "additionalInfo": {
+            "label": "Additional Information",
+            "placeholder": "Please provide any additional details about the client's care needs, medical conditions, or special requirements..."
+          }
+        }
+      }
+    },
+    "options": {
+      "careNeeds": [
+        { "value": "personal-care", "label": "Personal Care Services" },
+        { "value": "companion-care", "label": "Companion Care" },
+        { "value": "respite-care", "label": "Respite Care" },
+        { "value": "specialized-care", "label": "Specialized Care" },
+        { "value": "inclusive-care", "label": "Inclusive Care" },
+        { "value": "in-facility-care", "label": "In-Facility Care" },
+        { "value": "assessment", "label": "Care Assessment" },
+        { "value": "not-sure", "label": "Not Sure - Need Consultation" }
+      ],
+      "urgency": [
+        { "value": "immediate", "label": "Immediate (Within 24 hours)" },
+        { "value": "urgent", "label": "Urgent (Within 3 days)" },
+        { "value": "soon", "label": "Soon (Within a week)" },
+        { "value": "planning", "label": "Planning ahead (More than a week)" }
+      ],
+      "relation": [
+        { "value": "family", "label": "Family Member" },
+        { "value": "friend", "label": "Friend" },
+        { "value": "neighbor", "label": "Neighbor" },
+        { "value": "healthcare-provider", "label": "Healthcare Provider" },
+        { "value": "social-worker", "label": "Social Worker" },
+        { "value": "current-client", "label": "Current Client" },
+        { "value": "former-client", "label": "Former Client" },
+        { "value": "other", "label": "Other" }
+      ]
+    },
+    "terms": {
+      "checkboxText": "I confirm that I have permission to refer this client and understand that Dynamic Care Services will contact them to discuss their care needs. I agree to the privacy policy and terms of service.",
+      "privacyNote": "Your referral information is kept strictly confidential. We will only contact the referred client to discuss their care needs and will never share their information with unauthorized parties."
+    },
+    "submitButton": "Submit Referral",
+    "submittingButton": "Submitting Referral..."
+  },
+  "contact": {
+    "title": "Have Questions About Referring?",
+    "description": "Our team is here to help you with the referral process. Contact us if you have any questions or need assistance.",
+    "contactInfo": [
+      {
+        "icon": "📞",
+        "title": "Call Us",
+        "details": "972-999-8499",
+        "subtitle": "Available during business hours"
+      },
+      {
+        "icon": "📧",
+        "title": "Email Us",
+        "details": "dynamiccare565@gmail.com",
+        "subtitle": "Dedicated referral support team"
+      },
+      {
+        "icon": "🕐",
+        "title": "Response Time",
+        "details": "Within 24 Hours",
+        "subtitle": "We'll contact your referral promptly"
+      }
+    ]
+  }
+}
