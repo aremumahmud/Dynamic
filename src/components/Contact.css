@@ -193,6 +193,38 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Success Message */
+.success-message {
+  background: linear-gradient(135deg, var(--success-color) 0%, var(--success-color-dark) 100%);
+  color: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+.success-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.success-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.success-content p {
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.95;
+  color: #ffffff;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .contact-content1 {

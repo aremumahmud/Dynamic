@@ -758,6 +758,9 @@
 }
 
 .cta-button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
   background-color: var(--text-light);
   color: var(--text-primary);
   border: none;

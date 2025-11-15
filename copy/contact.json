@@ -8,7 +8,7 @@
     "badge": "Contact Us",
     "title": "Let's Start Your",
     "titleHighlight": "Home Care Journey",
-    "description": "Ready to provide the best home care services for you or your loved one? Contact Dynamic Care Services today for a free consultation. We're here to answer your questions and help you find the perfect home care solution in Houston.",
+    "description": "Ready to provide the best home care services for you or your loved one? Contact Dynamic Care Services today for a free consultation. We're here to answer your questions and help you find the perfect home care solution in Dallas-Fort Worth.",
     "stats": [
       { "number": "98%", "label": "Client Satisfaction" },
       { "number": "Free", "label": "Initial Consultation" },
@@ -36,8 +36,8 @@
       {
         "icon": "📍",
         "title": "Service Area",
-        "details": "Houston & Gulf Coast counties",
-        "subtext": "Serving Houston and surrounding communities",
+        "details": "Dallas-Fort Worth and surrounding areas",
+        "subtext": "Serving Dallas-Fort Worth and surrounding communities",
         "link": null
       },
       {

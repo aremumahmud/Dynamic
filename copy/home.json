@@ -92,13 +92,13 @@
     "badge": "Free Care Assessment",
     "mainHeading": "Reliable Home Care Rooted in Compassion.",
     "mainDescription": "We go beyond basic assistance — offering genuine care that nurtures independence, comfort, and peace of mind for your loved one.",
-    "teamStats": "Trusted by Houston Families",
+    "teamStats": "Trusted by Dallas-Fort Worth Families",
     "ctaButton": "Get Started Today",
     "imageOverlay": {
       "badges": {
         "personalCare": "PERSONAL CARE",
         "homeHealthCare": "HOME HEALTH CARE",
-        "houstonTX": "HOUSTON & GULF COAST"
+        "houstonTX": "DALLAS-FORT WORTH"
       }
     },
     "rotatingContent": [
@@ -131,7 +131,7 @@
   "statistics": {
     "familiesServed": {
       "number": 300,
-      "label": "Houston Families Served"
+      "label": "Dallas-Fort Worth Families Served"
     },
     "certifiedCaregivers": {
       "number": 35,
@@ -150,16 +150,16 @@
     "badge": "About Dynamic Care Services",
     "title": "Providing Reliable Care",
     "titleHighlight": "for Your Peace of Mind",
-    "description": "At Dynamic Care Services, we believe home is where care feels most meaningful. That's why we provide individualized in-home support designed to meet the unique needs of each client and their family. Whether it's assistance with daily routines, companionship, or specialized care, our trusted team of caregivers brings compassion, professionalism, and dedication into every visit. Serving Houston & Gulf Coast counties, we are committed to helping clients live comfortably and independently while giving families the reassurance they deserve.",
+    "description": "At Dynamic Care Services, we believe home is where care feels most meaningful. That's why we provide individualized in-home support designed to meet the unique needs of each client and their family. Whether it's assistance with daily routines, companionship, or specialized care, our trusted team of caregivers brings compassion, professionalism, and dedication into every visit. Serving Dallas-Fort Worth and surrounding areas, we are committed to helping clients live comfortably and independently while giving families the reassurance they deserve.",
     "imageOverlay": {
       "yearsExperience": "3+",
-      "yearsLabel": "Years Serving Houston"
+      "yearsLabel": "Years Serving Dallas-Fort Worth"
     }
   },
   "services": {
     "badge": "Our Home Care Services",
     "title": "Comprehensive Care Services",
-    "titleHighlight": "in Houston & Gulf Coast",
+    "titleHighlight": "in Dallas-Fort Worth and surrounding areas",
     "subtitle": "At Dynamic Care Services, we offer a comprehensive range of personalized care services designed to meet your unique needs and enhance your quality of life in the comfort of your own home. Each service is delivered with care, professionalism, and a commitment to improving quality of life.",
     "serviceCards": [
       {
@@ -225,7 +225,7 @@
     }
   },
   "trust": {
-    "title": "Why Houston Families <br> Trust Dynamic Care Services",
+    "title": "Why Dallas-Fort Worth Families <br> Trust Dynamic Care Services",
     "trustPoints": [
       {
         "title": "Certified Home Care Professionals",
@@ -238,8 +238,8 @@
         "icon": "□"
       },
       {
-        "title": "Local Houston Service",
-        "description": "Dedicated to serving Houston & Gulf Coast counties with reliable, consistent home care services.",
+        "title": "Local Dallas-Fort Worth Service",
+        "description": "Dedicated to serving Dallas-Fort Worth and surrounding areas with reliable, consistent home care services.",
         "icon": "◐"
       },
       {
@@ -251,39 +251,39 @@
   },
   "testimonials": {
     "badge": "Client Testimonials",
-    "title": "What Houston Families Say",
+    "title": "What Dallas-Fort Worth Families Say",
     "subtitle": "Read stories from families who have experienced the Dynamic Care Services difference.",
     "clientFeedbackLabel": "Client Feedback",
     "testimonials": [
       {
         "feedback": "The caregiver who visits my mom has become part of our family. She's attentive, patient, and always finds ways to make Mom smile. It's comforting to know she's in such good hands when I can't be there.",
         "name": "Linda R.",
-        "location": "Houston, TX"
+        "location": "Dallas-Fort Worth, TX"
       },
       {
         "feedback": "After my hip surgery, I needed help getting around and handling daily tasks. My caregiver was professional but also genuinely kind — she made recovery easier and helped me regain confidence.",
         "name": "James T.",
-        "location": "Houston, TX"
+        "location": "Dallas-Fort Worth, TX"
       },
       {
         "feedback": "We were nervous about bringing someone new into our home, but the Dynamic Care Services team immediately put us at ease. They're dependable, compassionate, and always go above and beyond for my father.",
         "name": "Patricia K.",
-        "location": "Houston, TX"
+        "location": "Dallas-Fort Worth, TX"
       },
       {
         "feedback": "When my mother needed specialized care for her dementia, Dynamic Care Services provided exactly what we needed. Their caregivers are trained and compassionate, making such a difficult time more manageable for our family.",
         "name": "Maria G.",
-        "location": "Houston, TX"
+        "location": "Dallas-Fort Worth, TX"
       },
       {
         "feedback": "The respite care services from Dynamic Care Services have been a lifesaver. As a full-time caregiver for my husband, having trusted professionals take over for a few hours gives me the break I desperately need.",
         "name": "Sarah L.",
-        "location": "Houston, TX"
+        "location": "Dallas-Fort Worth, TX"
       },
       {
         "feedback": "Dynamic Care Services' end-of-life care provided comfort and dignity during my father's final weeks. Their compassionate approach helped our entire family through an incredibly difficult time.",
         "name": "Robert M.",
-        "location": "Houston, TX"
+        "location": "Dallas-Fort Worth, TX"
       }
     ],
     "carouselControls": {
@@ -299,7 +299,7 @@
     "badge": "Refer With Confidence",
     "title": "Share the Gift of",
     "titleHighlight": "Professional Home Care Services",
-    "description": "Know someone in Houston or the Gulf Coast who could benefit from our home care services? Your referral helps us extend our compassionate care to more families in need.",
+    "description": "Know someone in Dallas-Fort Worth and surrounding areas who could benefit from our home care services? Your referral helps us extend our compassionate care to more families in need.",
     "reasonsTitle": "Why Refer to Dynamic Care Services?",
     "reasons": [
       {
@@ -311,14 +311,14 @@
         "description": "We treat each client with dignity, respect, and genuine care, focusing on their unique home care needs."
       },
       {
-        "title": "Local Houston Service",
-        "description": "We value your trust and confidence in our services. Ask about our referral appreciation program for Houston families."
+        "title": "Local Dallas-Fort Worth Service",
+        "description": "We value your trust and confidence in our services. Ask about our referral appreciation program for Dallas-Fort Worth families."
       }
     ],
     "ctaButton": "Refer Someone Today",
     "imageOverlay": {
       "mainText": "Making a difference",
-      "subText": "in Houston families"
+      "subText": "in Dallas-Fort Worth families"
     }
   },
   "blog": {
@@ -393,8 +393,8 @@
       {
         "icon": "📍",
         "title": "Service Area",
-        "details": "Houston & Gulf Coast counties",
-        "subtext": "Serving the greater Houston area"
+        "details": "Dallas-Fort Worth and surrounding areas",
+        "subtext": "Serving the greater Dallas-Fort Worth area"
       }
     ],
     "form": {
@@ -434,15 +434,15 @@
   "faq": {
     "badge": "FAQ",
     "title": "Frequently Asked Questions",
-    "subtitle": "Find answers to common questions about our home care services and how we can help your family in Houston.",
+    "subtitle": "Find answers to common questions about our home care services and how we can help your family in Dallas-Fort Worth.",
     "questions": [
       {
         "question": "What home care services does Dynamic Care Services provide?",
-        "answer": "We offer comprehensive home care services including Personal Care Services, Companion Care, Respite Care, In-Facility Care, Specialized Care (Alzheimer's & Dementia, Parkinson's, Post-Surgery), and End-of-Life Care. All services are provided by certified, background-checked caregivers in Houston & Gulf Coast counties."
+        "answer": "We offer comprehensive home care services including Personal Care Services, Companion Care, Respite Care, In-Facility Care, Specialized Care (Alzheimer's & Dementia, Parkinson's, Post-Surgery), and End-of-Life Care. All services are provided by certified, background-checked caregivers in Dallas-Fort Worth and surrounding areas."
       },
       {
         "question": "What areas do you serve?",
-        "answer": "We proudly serve Houston & Gulf Coast counties. Our goal is to bring professional home care services directly to your doorstep throughout the greater Houston area."
+        "answer": "We proudly serve Dallas-Fort Worth and surrounding areas. Our goal is to bring professional home care services directly to your doorstep throughout the greater Dallas-Fort Worth area."
       },
       {
         "question": "Are your caregivers licensed and insured?",
@@ -477,7 +477,7 @@
   },
   "footer": {
     "companyName": "Dynamic Care Services",
-    "companyDescription": "Providing reliable care for your peace of mind in Houston & Gulf Coast counties. Bringing compassionate caregivers to your doorstep with dignity, respect, and genuine human connection.",
+    "companyDescription": "Providing reliable care for your peace of mind in Dallas-Fort Worth and surrounding areas. Bringing compassionate caregivers to your doorstep with dignity, respect, and genuine human connection.",
     "badges": [
       "Licensed & Insured",
       "Certified Caregivers",
@@ -516,7 +516,7 @@
       },
       "contactInfo": {
         "title": "Contact Information",
-        "serviceArea": "Houston & Gulf Coast counties",
+        "serviceArea": "Dallas-Fort Worth and surrounding areas",
         "phone": "972-999-8499",
         "email": "dynamiccare565@gmail.com"
       },
@@ -543,6 +543,6 @@
       "subscribeButton": "Subscribe"
     },
     "copyright": "© 2024 Dynamic Care Services. All rights reserved.",
-    "tagline": "Serving the areas of Houston & Gulf Coast counties. Experts in providing compassionate in-home care. Offering services like personal care, companion care, respite care, and specialized memory care."
+    "tagline": "Serving the areas of Dallas-Fort Worth and surrounding areas. Experts in providing compassionate in-home care. Offering services like personal care, companion care, respite care, and specialized memory care."
   }
 }

@@ -1,5 +1,6 @@
 import './FAQ.css'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import homeCopy from '../../copy/home.json'
 
 function FAQ() {
@@ -57,9 +58,9 @@ function FAQ() {
                     <div className="faq-cta">
                         <h3>{homeCopy.faq.ctaSection.title}</h3>
                         <p>{homeCopy.faq.ctaSection.description}</p>
-                        <button className="faq-contact-btn">
+                        <Link to="/contact" className="faq-contact-btn">
                             {homeCopy.faq.ctaSection.button}
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

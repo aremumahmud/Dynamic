@@ -277,7 +277,7 @@
 /* Success Message */
 .success-message {
   background: linear-gradient(135deg, var(--success-color) 0%, var(--success-color-dark) 100%);
-  color: var(--text-light);
+  color: #ffffff;
   padding: 32px;
   border-radius: 16px;
   margin-bottom: 40px;
@@ -296,6 +296,7 @@
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .success-content p {
@@ -303,6 +304,7 @@
   margin: 0;
   opacity: 0.95;
   line-height: 1.5;
+  color: #ffffff;
 }
 
 /* Form Styles */

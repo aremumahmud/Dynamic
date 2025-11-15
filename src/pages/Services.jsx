@@ -1,6 +1,6 @@
 import './Services.css'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { servicesData, servicesList } from '../data/servicesData'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -10,7 +10,7 @@ import servicesCopy from '../../copy/services.json'
 
 function Services() {
     const { serviceId } = useParams();
-    const [activeService, setActiveService] = useState(serviceId || 'companionship-care');
+    const [activeService, setActiveService] = useState(serviceId || 'companion-care');
 
     useEffect(() => {
         // Scroll to top when component mounts
@@ -116,7 +116,7 @@ function Services() {
                         <div className="service-cta1" data-aos="fade-up" data-aos-delay="600">
                             <h3 className="cta-title">{servicesCopy.serviceDetails.ctaTitle}</h3>
                             <p className="cta-description">{servicesCopy.serviceDetails.ctaDescription}</p>
-                            <button className="cta-button">{servicesCopy.serviceDetails.ctaButton}</button>
+                            <Link to="/scheduling" className="cta-button">{servicesCopy.serviceDetails.ctaButton}</Link>
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,13 @@
 import './Services.css'
+import { Link } from 'react-router-dom'
 import homeCopy from '../../copy/home.json'
 
 function Services() {
+    const serviceIds = ["personal-care", "companion-care", "respite-care", "in-facility-care", "specialized-care", "end-of-life-care"];
+    
     const services = homeCopy.services.serviceCards.map((service, index) => ({
         id: index + 1,
+        serviceId: serviceIds[index] || "",
         title: service.title,
         image: homeCopy.images.services.serviceImages[index],
         description: service.description,
@@ -58,10 +62,10 @@ function Services() {
                                         </div>
                                     </div> */}
                                     
-                                    <div className="service-btn">
+                                    <Link to={`/services/${service.serviceId}`} className="service-btn">
                                         <span>{homeCopy.services.learnMoreButton}</span>
                                         <i className="btn-icon">→</i>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -73,9 +77,9 @@ function Services() {
                     <p className="cta-description">
                         {homeCopy.services.ctaSection.description}
                     </p>
-                    <button className="cta-button">
+                    <Link to="/scheduling" className="cta-button">
                         {homeCopy.services.ctaSection.button}
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

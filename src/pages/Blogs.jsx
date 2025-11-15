@@ -1,6 +1,6 @@
 import './Blogs.css'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { blogsData, blogCategories } from '../data/blogsData'
@@ -113,7 +113,7 @@ function Blogs() {
                                 <div className="blog-cta">
                                     <h3>{blogsCopy.articleView.cta.title}</h3>
                                     <p>{blogsCopy.articleView.cta.description}</p>
-                                    <button className="cta-button">{blogsCopy.articleView.cta.button}</button>
+                                    <Link to="/scheduling" className="cta-button">{blogsCopy.articleView.cta.button}</Link>
                                 </div>
                             </div>
                         </div>

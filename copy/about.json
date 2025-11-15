@@ -18,8 +18,8 @@
     "titleHighlight": "",
     "description": "Here at Dynamic Care Services, we understand how important it is to find someone who cares like you do. That's why our caregivers are carefully chosen and personally trained to provide the same warmth, reliability, and respect we'd want for our own loved ones.",
     "stats": [
-      { "number": "300+", "label": "Houston Families Served" },
-      { "number": "3+", "label": "Years Serving Houston" },
+      { "number": "300+", "label": "Dallas-Fort Worth Families Served" },
+      { "number": "3+", "label": "Years Serving Dallas-Fort Worth" },
       { "number": "35+", "label": "Certified Caregivers" },
       { "number": "98%", "label": "Client Satisfaction Rate" }
     ]
@@ -27,14 +27,14 @@
   "mission": {
     "title": "Our Mission",
     "statement": "At Dynamic Care Services, we know that choosing a home care provider is about more than services — it's about trust, compassion, and peace of mind. Our mission is simple: to provide reliable, personalized care that allows our clients to live safely, comfortably, and with dignity in the place they call home.",
-    "values": "We offer a wide range of services, from companionship and personal care to respite and specialized support, ensuring every client receives the care that best fits their unique needs. Our team of skilled and certified caregivers is dedicated to treating every client like family — with patience, respect, and a commitment to excellence. Serving families in Houston & Gulf Coast counties, we are proud to be a trusted partner for clients and their loved ones. Whether you need a few hours of help each week or around-the-clock care, you can count on us to be there every step of the way."
+    "values": "We offer a wide range of services, from companionship and personal care to respite and specialized support, ensuring every client receives the care that best fits their unique needs. Our team of skilled and certified caregivers is dedicated to treating every client like family — with patience, respect, and a commitment to excellence. Serving families in Dallas-Fort Worth and surrounding areas, we are proud to be a trusted partner for clients and their loved ones. Whether you need a few hours of help each week or around-the-clock care, you can count on us to be there every step of the way."
   },
   "story": {
     "title": "Our Story",
     "paragraphs": [
       "At Dynamic Care Services, we know that choosing a home care provider is about more than services — it's about trust, compassion, and peace of mind. Our mission is simple: to provide reliable, personalized care that allows our clients to live safely, comfortably, and with dignity in the place they call home.",
       "We offer a wide range of services, from companionship and personal care to respite and specialized support, ensuring every client receives the care that best fits their unique needs. Our team of skilled and certified caregivers is dedicated to treating every client like family — with patience, respect, and a commitment to excellence.",
-      "Serving families in Houston & Gulf Coast counties, we are proud to be a trusted partner for clients and their loved ones. Whether you need a few hours of help each week or around-the-clock care, you can count on us to be there every step of the way."
+      "Serving families in Dallas-Fort Worth and surrounding areas, we are proud to be a trusted partner for clients and their loved ones. Whether you need a few hours of help each week or around-the-clock care, you can count on us to be there every step of the way."
     ]
   },
   "values": {
@@ -49,7 +49,7 @@
       {
         "icon": "🤝",
         "title": "Trust & Reliability",
-        "description": "Building lasting relationships through consistent, dependable home care services that Houston families can count on, day after day."
+        "description": "Building lasting relationships through consistent, dependable home care services that Dallas-Fort Worth families can count on, day after day."
       },
       {
         "icon": "🌟",
@@ -64,7 +64,7 @@
       {
         "icon": "👥",
         "title": "Family Partnership",
-        "description": "We work closely with Houston families, providing support, communication, and peace of mind throughout the care journey."
+        "description": "We work closely with Dallas-Fort Worth families, providing support, communication, and peace of mind throughout the care journey."
       },
       {
         "icon": "🌈",
@@ -78,7 +78,7 @@
     "points": [
       {
         "title": "Licensed & Insured",
-        "description": "All our home care caregivers are thoroughly vetted, licensed, and insured for your peace of mind in Houston."
+        "description": "All our home care caregivers are thoroughly vetted, licensed, and insured for your peace of mind in Dallas-Fort Worth."
       },
       {
         "title": "Ongoing Training",
@@ -90,13 +90,13 @@
       },
       {
         "title": "Personalized Care",
-        "description": "Every care plan is tailored to meet the unique needs and preferences of each Houston client."
+        "description": "Every care plan is tailored to meet the unique needs and preferences of each Dallas-Fort Worth client."
       }
     ]
   },
   "cta": {
     "title": "Ready to Start Your Home Care Journey?",
-    "description": "Let Dynamic Care Services help you or your loved one maintain independence and dignity at home in Houston. Contact us today for a free consultation and discover how our home care services can support your family.",
+    "description": "Let Dynamic Care Services help you or your loved one maintain independence and dignity at home in Dallas-Fort Worth. Contact us today for a free consultation and discover how our home care services can support your family.",
     "buttons": {
       "primary": "Schedule Consultation",
       "secondary": "Contact Us"

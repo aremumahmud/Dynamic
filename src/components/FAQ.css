@@ -163,6 +163,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: var(--shadow-md);
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
 }
 
 .faq-contact-btn:hover {

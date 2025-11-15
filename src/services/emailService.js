@@ -3,6 +3,7 @@ const BREVO_API_URL = 'https://api.brevo.com/v3/smtp/email';
 const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY;
 const Admin_Email = import.meta.env.VITE_Admin_Email;
 const Admin_Name = import.meta.env.VITE_Admin_Name;
+const Admin_Sender = import.meta.env.VITE_ADMIN_SENDER;
 
 console.log('Admin_Email:', Admin_Email);
 console.log('Admin_Name:', Admin_Name);
@@ -66,7 +67,7 @@ class EmailService {
         const emailData = {
             sender: {
                 name: Admin_Name,
-                email: Admin_Email
+                email: Admin_Sender
             },
             to: [
                 {
@@ -91,7 +92,7 @@ class EmailService {
         const emailData = {
             sender: {
                 name: Admin_Name,
-                email: Admin_Email
+                email: Admin_Sender
             },
             to: [
                 {
@@ -112,7 +113,7 @@ class EmailService {
         const emailData = {
             sender: {
                 name: Admin_Name,
-                email: Admin_Email
+                email: Admin_Sender
             },
             to: [
                 {
@@ -137,7 +138,7 @@ class EmailService {
         const emailData = {
             sender: {
                 name: Admin_Name,
-                email: Admin_Email
+                email: Admin_Sender
             },
             to: [
                 {
@@ -158,7 +159,7 @@ class EmailService {
         const emailData = {
             sender: {
                 name: Admin_Name,
-                email: Admin_Email
+                email: Admin_Sender
             },
             to: [
                 {
@@ -183,7 +184,7 @@ class EmailService {
         const emailData = {
             sender: {
             name: Admin_Name,
-                email: Admin_Email
+                email: Admin_Sender
             },
             to: [
                 {
@@ -1298,7 +1299,7 @@ Houston & Gulf Coast counties
         const emailPayload = {
             sender: {
                 name: `${Admin_Name} Newsletter`,
-                email: Admin_Email
+                email: Admin_Sender
             },
             to: [
                 {
