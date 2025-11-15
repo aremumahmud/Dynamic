@@ -16,17 +16,17 @@ function JobDetail() {
     const handleApplyClick = (position) => {
         // Get the job type from the current job
         const job = jobListings[jobId];
-        const jobType = job ? job.type : 'Personal Care Assistant';
+        const jobType = job ? job.type : 'Home Care Assistant';
         
         const subject = encodeURIComponent(`Application for ${position} - ${jobType} Position`);
-        const body = encodeURIComponent(`Dear Luzi Home Health Services Team,
+        const body = encodeURIComponent(`Dear Dynamic Care Services Team,
 
-I am writing to express my interest in the ${position} position (${jobType}) at Luzi Home Health Services LLC.
+I am writing to express my interest in the ${position} position (${jobType}) at Dynamic Care Services.
 
 POSITION DETAILS:
 - Position: ${position}
 - Schedule: ${jobType}
-- Location: San Antonio, TX & Surrounding Areas
+- Location: Dallas-Fort Worth and surrounding areas
 - Pay: Competitive compensation based on experience
 
 MY QUALIFICATIONS:
@@ -54,19 +54,19 @@ Best regards,
 [Your Phone Number]
 [Your Email Address]`);
         
-        window.location.href = `mailto:admin@texanovahomecare.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:dynamiccare565@gmail.com?subject=${subject}&body=${body}`;
     };
 
     const jobListings = {
-        'personal-care-assistant-full-time': {
+        'home-care-assistant-full-time': {
             id: 1,
-            title: "Personal Care Assistant",
+            title: "Home Care Assistant",
             type: "Full-time",
-            location: "San Antonio, TX & Surrounding Areas",
+            location: "Dallas-Fort Worth and surrounding areas",
             salary: "Competitive Pay",
             posted: "Now Hiring",
-            image: careersCopy.images.jobImages['personal-care-assistant-full-time'],
-            description: "Join our compassionate team and make a meaningful difference in the lives of our clients. We're seeking dedicated Personal Care Assistants who are passionate about providing exceptional care to seniors and individuals with disabilities in the comfort of their own homes in San Antonio.",
+            image: careersCopy.images.jobImages['home-care-assistant-full-time'],
+            description: "Join our compassionate team and make a meaningful difference in the lives of our clients. We're seeking dedicated Home Care Assistants who are passionate about providing exceptional care to seniors and individuals with disabilities in the comfort of their own homes in Dallas-Fort Worth.",
             responsibilities: [
                 "Assist clients with personal hygiene (bathing, dressing, grooming)",
                 "Provide companionship and emotional support",
@@ -93,88 +93,6 @@ Best regards,
                 "Flexible full-time scheduling",
                 "Health insurance options",
                 "Paid time off and holidays",
-                "Ongoing training and professional development",
-                "Supportive work environment",
-                "Opportunity to make a real difference",
-                "Mileage reimbursement for client visits"
-            ]
-        },
-        'personal-care-assistant-part-time': {
-            id: 2,
-            title: "Personal Care Assistant",
-            type: "Part-time",
-            location: "San Antonio, TX & Surrounding Areas",
-            salary: "Competitive Pay",
-            posted: "Now Hiring",
-            image: careersCopy.images.jobImages['personal-care-assistant-full-time'],
-            description: "We are seeking compassionate Personal Care Assistants to provide professional care in clients' homes in San Antonio. This part-time position offers the opportunity to build meaningful relationships with clients and their families while delivering high-quality personal care services.",
-            responsibilities: [
-                "Assist clients with personal hygiene (bathing, dressing, grooming)",
-                "Provide companionship and emotional support",
-                "Help with meal preparation and feeding assistance",
-                "Support mobility and safe movement throughout the home",
-                "Provide medication reminders and assistance",
-                "Perform light housekeeping tasks",
-                "Monitor and report changes in client condition",
-                "Communicate effectively with clients, families, and care team"
-            ],
-            requirements: [
-                "High school diploma or equivalent",
-                "Previous caregiving experience preferred but not required",
-                "Excellent communication and interpersonal skills",
-                "Compassionate, patient, and reliable personality",
-                "Ability to lift up to 50 pounds",
-                "Valid driver's license and reliable transportation",
-                "Clean background check and drug screening",
-                "CPR certification preferred (we can help you obtain)",
-                "Flexibility to work various shifts"
-            ],
-            benefits: [
-                "Competitive pay based on experience",
-                "Flexible part-time scheduling",
-                "Health insurance options available",
-                "Paid time off for eligible employees",
-                "Ongoing training and professional development",
-                "Supportive work environment",
-                "Opportunity to make a real difference",
-                "Mileage reimbursement for client visits"
-            ]
-        },
-        'personal-care-assistant-weekend': {
-            id: 3,
-            title: "Personal Care Assistant",
-            type: "Weekend Shifts",
-            location: "San Antonio, TX & Surrounding Areas",
-            salary: "Competitive Pay",
-            posted: "Now Hiring",
-            image: careersCopy.images.jobImages['personal-care-assistant-full-time'],
-            description: "Looking for weekend Personal Care Assistants to join our team. Provide essential care and companionship to clients during weekend hours while maintaining a flexible schedule that works for you.",
-            responsibilities: [
-                "Assist clients with personal hygiene (bathing, dressing, grooming)",
-                "Provide companionship and emotional support",
-                "Help with meal preparation and feeding assistance",
-                "Support mobility and safe movement throughout the home",
-                "Provide medication reminders and assistance",
-                "Perform light housekeeping tasks",
-                "Monitor and report changes in client condition",
-                "Communicate effectively with clients, families, and care team"
-            ],
-            requirements: [
-                "High school diploma or equivalent",
-                "Previous caregiving experience preferred but not required",
-                "Excellent communication and interpersonal skills",
-                "Compassionate, patient, and reliable personality",
-                "Ability to lift up to 50 pounds",
-                "Valid driver's license and reliable transportation",
-                "Clean background check and drug screening",
-                "CPR certification preferred (we can help you obtain)",
-                "Weekend availability (Saturday and/or Sunday)"
-            ],
-            benefits: [
-                "Competitive pay with weekend differential",
-                "Flexible weekend scheduling",
-                "Health insurance options available",
-                "Paid time off for eligible employees",
                 "Ongoing training and professional development",
                 "Supportive work environment",
                 "Opportunity to make a real difference",
@@ -307,12 +225,12 @@ Best regards,
                         </button>
                         <p className="apply-note">
                             Questions about this position? Contact us at{' '}
-                            <a href="mailto:admin@texanovahomecare.com" className="email-link">
-                                admin@texanovahomecare.com
+                            <a href="mailto:dynamiccare565@gmail.com" className="email-link">
+                                dynamiccare565@gmail.com
                             </a>{' '}
                             or call{' '}
-                            <a href="tel:+19566399224" className="phone-link">
-+1 956-639-9224
+                            <a href="tel:+19729998499" className="phone-link">
+                                972-999-8499
                             </a>
                         </p>
                     </div>

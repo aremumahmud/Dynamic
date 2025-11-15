@@ -13,19 +13,19 @@ function Careers() {
 
     const handleApplyClick = (position) => {
         const subject = encodeURIComponent(`Application for ${position}`);
-        const body = encodeURIComponent(`Dear Journey of Care Team,
+        const body = encodeURIComponent(`Dear Dynamic Care Services Team,
 
 I am interested in applying for the ${position} position. Please find my resume attached and let me know if you need any additional information.
 
 Best regards,
 [Your Name]`);
         
-        window.location.href = `mailto:admin@texanovahomecare.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:dynamiccare565@gmail.com?subject=${subject}&body=${body}`;
     };
 
     const jobListings = careersCopy.jobListings.jobs.map((job, index) => ({
         ...job,
-        image: careersCopy.images.jobImages[job.slug] || careersCopy.images.jobImages['personal-care-assistant-full-time']
+        image: careersCopy.images.jobImages[job.slug] || careersCopy.images.jobImages['home-care-assistant-full-time']
     }));
 
 
