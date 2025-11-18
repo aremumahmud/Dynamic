@@ -70,7 +70,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  background: var(--text-light);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -95,14 +95,14 @@
   text-align: center;
 }
 
-.stat-number {
+.stat-number2 {
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
-.stat-label {
+.stat-label2 {
   font-size: 0.9rem;
   color: var(--text-secondary);
   font-weight: 500;

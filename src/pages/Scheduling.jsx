@@ -170,8 +170,8 @@ function Scheduling() {
                             <div className="scheduling-stats" data-aos="fade-up" data-aos-delay="200">
                                 {schedulingCopy.hero.stats.map((stat, index) => (
                                     <div key={index} className="stat">
-                                        <span className="stat-number">{stat.number}</span>
-                                        <span className="stat-label">{stat.label}</span>
+                                        <span className="stat-number2">{stat.number}</span>
+                                        <span className="stat-label2">{stat.label}</span>
                                     </div>
                                 ))}
                             </div>

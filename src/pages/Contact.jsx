@@ -98,7 +98,7 @@ function Contact() {
                             <div className="contact-badge">{contactCopy.hero.badge}</div>
                             <h1 className="contact-hero-title">
                                 {contactCopy.hero.title}<br />
-                                <span className="highlight1">{contactCopy.hero.titleHighlight}</span>
+                                <span className="highlight">{contactCopy.hero.titleHighlight}</span>
                             </h1>
                             <p className="contact-hero-description">
                                 {contactCopy.hero.description}

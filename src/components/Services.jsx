@@ -19,7 +19,7 @@ function Services() {
         <section className="services-section">
             <div className="services-container">
                 <div className="services-header" data-aos="fade-up">
-                    <div className="services-badge">{homeCopy.services.badge}</div>
+                    <div className="services-badge1">{homeCopy.services.badge}</div>
                     <h2 className="services-title">
                         {homeCopy.services.title} <span className="title-highlight">{homeCopy.services.titleHighlight}</span>
                     </h2>
