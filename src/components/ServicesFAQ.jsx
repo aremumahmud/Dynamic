@@ -83,9 +83,9 @@ function ServicesFAQ() {
                     <div className="services-faq-cta">
                         <h3>Need More Information About Our Services?</h3>
                         <p>Our care specialists are here to answer your questions and help you choose the right services.</p>
-                        <button className="services-faq-contact-btn">
+                        <a href="/contact"><button className="services-faq-contact-btn">
                             Speak with a Care Specialist
-                        </button>
+                        </button></a>
                     </div>
                 </div>
             </div>

@@ -54,7 +54,7 @@ function FAQ() {
                     ))}
                 </div>
 
-                <div className="faq-footer" data-aos="fade-up" data-aos-delay="800">
+                {/* <div className="faq-footer" data-aos="fade-up" data-aos-delay="800">
                     <div className="faq-cta">
                         <h3>{homeCopy.faq.ctaSection.title}</h3>
                         <p>{homeCopy.faq.ctaSection.description}</p>
@@ -62,7 +62,7 @@ function FAQ() {
                             {homeCopy.faq.ctaSection.button}
                         </Link>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     )

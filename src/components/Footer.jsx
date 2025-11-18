@@ -44,7 +44,7 @@ function Footer() {
                             ))}
                         </ul>
                         <div className="footer-cta">
-                            <a href="#contact" className="schedule-btn">{homeCopy.footer.sections.ourServices.ctaButton}</a>
+                            <a href="/scheduling" className="schedule-btn">{homeCopy.footer.sections.ourServices.ctaButton}</a>
                         </div>
                     </div>
 
