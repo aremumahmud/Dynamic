@@ -1,6 +1,6 @@
 import './Services.css'
 import { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { servicesData, servicesList } from '../data/servicesData'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -10,12 +10,18 @@ import servicesCopy from '../../copy/services.json'
 
 function Services() {
     const { serviceId } = useParams();
-    const [activeService, setActiveService] = useState(serviceId || 'companion-care');
+    const navigate = useNavigate();
+    const [activeService, setActiveService] = useState(serviceId || servicesList[0].id);
 
     useEffect(() => {
+        // Redirect to first service if no serviceId is provided
+        if (!serviceId) {
+            navigate(`/services/${servicesList[0].id}`, { replace: true });
+            return;
+        }
         // Scroll to top when component mounts
         window.scrollTo(0, 0);
-    }, []);
+    }, [serviceId, navigate]);
 
     useEffect(() => {
         if (serviceId && servicesData[serviceId]) {
