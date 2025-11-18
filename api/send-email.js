@@ -4,6 +4,7 @@
 const BREVO_API_URL = 'https://api.brevo.com/v3/smtp/email';
 const BREVO_API_KEY = process.env.BREVO_API_KEY;
 const Admin_Email = process.env.ADMIN_EMAIL;
+const Admin_Sender = process.env.ADMIN_SENDER;
 const Admin_Name = process.env.ADMIN_NAME;
 const Admin_Phone = process.env.ADMIN_PHONE || '972-999-8499'; // Default fallback
 // Format phone for tel: links (remove spaces, parentheses, but keep +)
@@ -277,7 +278,7 @@ export default async function handler(req, res) {
                 emailPayload = {
                     sender: {
                         name: Admin_Name,
-                        email: Admin_Email
+                        email: Admin_Sender
                     },
                     to: [
                         {
@@ -299,7 +300,7 @@ export default async function handler(req, res) {
                 emailPayload = {
                     sender: {
                         name: Admin_Name,
-                        email: Admin_Email
+                        email: Admin_Sender
                     },
                     to: [
                         {
@@ -317,7 +318,7 @@ export default async function handler(req, res) {
                 emailPayload = {
                     sender: {
                         name: Admin_Name,
-                        email: Admin_Email
+                        email: Admin_Sender
                     },
                     to: [
                         {
@@ -339,7 +340,7 @@ export default async function handler(req, res) {
                 emailPayload = {
                     sender: {
                         name: Admin_Name,
-                        email: Admin_Email
+                        email: Admin_Sender
                     },
                     to: [
                         {
@@ -357,7 +358,7 @@ export default async function handler(req, res) {
                 emailPayload = {
                     sender: {
                         name: Admin_Name,
-                        email: Admin_Email
+                        email: Admin_Sender
                     },
                     to: [
                         {
@@ -379,7 +380,7 @@ export default async function handler(req, res) {
                 emailPayload = {
                     sender: {
                         name: Admin_Name,
-                        email: Admin_Email
+                        email: Admin_Sender
                     },
                     to: [
                         {
@@ -397,7 +398,7 @@ export default async function handler(req, res) {
                 emailPayload = {
                     sender: {
                         name: `${Admin_Name} Newsletter`,
-                        email: Admin_Email
+                        email: Admin_Sender
                     },
                     to: [
                         {
