@@ -1,5 +1,5 @@
 import './Contact.css'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import emailService from '../services/emailService'
 import homeCopy from '../../copy/home.json'
 
@@ -15,6 +15,17 @@ function Contact() {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    const successMessageRef = useRef(null);
+
+    useEffect(() => {
+        // Scroll to success message when it appears
+        if (showSuccessMessage && successMessageRef.current) {
+            successMessageRef.current.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+        }
+    }, [showSuccessMessage]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -106,7 +117,7 @@ function Contact() {
 
                     <div className="contact-form-wrapper" data-aos="fade-left" data-aos-delay="300">
                         {showSuccessMessage && (
-                            <div className="success-message" data-aos="fade-in">
+                            <div ref={successMessageRef} className="success-message" data-aos="fade-in">
                                 <div className="success-icon">✅</div>
                                 <div className="success-content">
                                     <h4>Thank You for Your Message!</h4>

@@ -1,5 +1,5 @@
 import './Scheduling.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { servicesList } from '../data/servicesData'
@@ -41,11 +41,22 @@ function Scheduling() {
     const [currentStep, setCurrentStep] = useState(1);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    const successMessageRef = useRef(null);
 
     useEffect(() => {
         // Scroll to top when component mounts
         window.scrollTo(0, 0);
     }, []);
+
+    useEffect(() => {
+        // Scroll to success message when it appears
+        if (showSuccessMessage && successMessageRef.current) {
+            successMessageRef.current.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+        }
+    }, [showSuccessMessage]);
 
     const handleInputChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -208,7 +219,7 @@ function Scheduling() {
 
                     {/* Success Message */}
                     {showSuccessMessage && (
-                        <div className="success-message" data-aos="fade-in">
+                        <div ref={successMessageRef} className="success-message" data-aos="fade-in">
                             <div className="success-icon">🎉</div>
                             <div className="success-content">
                                 <h3>{schedulingCopy.form.successMessage.title}</h3>

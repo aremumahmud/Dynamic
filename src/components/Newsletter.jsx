@@ -1,5 +1,5 @@
 import './Newsletter.css'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import emailService from '../services/emailService'
 import homeCopy from '../../copy/home.json'
 
@@ -7,6 +7,17 @@ function Newsletter() {
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const successMessageRef = useRef(null);
+
+    useEffect(() => {
+        // Scroll to success message when it appears
+        if (isSubmitted && successMessageRef.current) {
+            successMessageRef.current.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
+        }
+    }, [isSubmitted]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -79,7 +90,7 @@ function Newsletter() {
                         </form>
 
                         {isSubmitted && (
-                            <div className="success-message" data-aos="fade-in">
+                            <div ref={successMessageRef} className="success-message" data-aos="fade-in">
                                 {homeCopy.newsletter.successMessage}
                             </div>
                         )}
