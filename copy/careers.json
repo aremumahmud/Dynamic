@@ -11,8 +11,7 @@
     "description": "Make a meaningful difference in people's lives while building a rewarding career in home care. We're looking for compassionate, dedicated caregivers to join our growing team in Dallas-Fort Worth.",
     "stats": [
       { "number": "Competitive", "label": "Pay" },
-      { "number": "Flexible", "label": "Scheduling" },
-      { "number": "Full Benefits", "label": "Package Available" }
+      { "number": "Flexible", "label": "Scheduling" }
     ]
   },
   "jobListings": {
