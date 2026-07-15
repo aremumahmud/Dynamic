@@ -48,6 +48,9 @@ export const metadata = {
   alternates: {
     canonical: 'https://dynamiccareservicesllc.com/',
   },
+  verification: {
+    google: 'FsELvPGymNXkg3tswVS95XYyasM_2xk884LKM8-Qwzc',
+  },
   openGraph: {
     type: 'website',
     url: 'https://dynamiccareservicesllc.com/',
