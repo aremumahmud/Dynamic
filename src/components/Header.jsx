@@ -1,14 +1,15 @@
+'use client'
+
 import './Header.css'
 import GooeyBtn from './gooeybtn'
 // import ThemeToggle from './ThemeToggle'
 import { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import Link from 'next/link'
 import homeCopy from '../../copy/home.json'
 
 function Header() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
 
   const services = [
     { name: homeCopy.header.servicesDropdown.personalCare, href: '/services/personal-care' },
@@ -69,44 +70,45 @@ function Header() {
     <header className="header" data-aos="fade-down">
       <div className="header-container">
         {/* Logo */}
-        <Link to="/" className="logo" data-aos="fade-right" data-aos-delay="100" onClick={closeMobileMenu}>
+        <Link href="/" className="logo" data-aos="fade-right" data-aos-delay="100" onClick={closeMobileMenu}>
           <img src={homeCopy.images.logo} alt={homeCopy.header.logo.alt} />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="nav desktop-nav" data-aos="fade-down" data-aos-delay="200">
           <ul className="nav-list">
-            <li><Link to="/about" className="nav-link">{homeCopy.header.navigation.about}</Link></li>
+            <li><Link href="/about" className="nav-link">{homeCopy.header.navigation.about}</Link></li>
             <li 
               className="nav-item dropdown"
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <Link to="/services" className="nav-link dropdown-toggle">
+              <Link href="/services" className="nav-link dropdown-toggle">
                 {homeCopy.header.navigation.services}
                 <span className={`dropdown-arrow ${isServicesOpen ? 'open' : ''}`}>▼</span>
               </Link>
               <div className={`dropdown-menu ${isServicesOpen ? 'show' : ''}`}>
                 {services.map((service, index) => (
-                  <Link key={index} to={service.href} className="dropdown-item">
+                  <Link key={index} href={service.href} className="dropdown-item">
                     {service.name}
                   </Link>
                 ))}
               </div>
             </li>
-            <li><Link to="/careers" className="nav-link">{homeCopy.header.navigation.careers}</Link></li>
-            <li><a href="/blogs" className="nav-link">{homeCopy.header.navigation.blog}</a></li>
-            <li><Link to="/refer-us" className="nav-link">{homeCopy.header.navigation.referUs}</Link></li>
+            <li><Link href="/careers" className="nav-link">{homeCopy.header.navigation.careers}</Link></li>
+            <li><Link href="/blogs" className="nav-link">{homeCopy.header.navigation.blog}</Link></li>
+            <li><Link href="/locations" className="nav-link">Service Areas</Link></li>
+            <li><Link href="/refer-us" className="nav-link">{homeCopy.header.navigation.referUs}</Link></li>
           </ul>
         </nav>
 
         {/* Desktop CTA Buttons */}
         <div className="cta-buttons desktop-cta" data-aos="fade-left" data-aos-delay="300">
           {/* <ThemeToggle /> */}
-          <Link to="/contact">
+          <Link href="/contact">
             <GooeyBtn text={homeCopy.header.ctaButtons.contact} variant="white" extendby={84} />
           </Link>
-          <Link to="/scheduling">
+          <Link href="/scheduling">
             <GooeyBtn text={homeCopy.header.ctaButtons.scheduleCare} variant="black" extendby={120} direction="left" />
           </Link>
         </div>
@@ -130,7 +132,7 @@ function Header() {
         <div className="mobile-nav-content">
           <ul className="mobile-nav-list">
             <li>
-              <Link to="/about" className="mobile-nav-link" onClick={closeMobileMenu}>
+              <Link href="/about" className="mobile-nav-link" onClick={closeMobileMenu}>
                 {homeCopy.header.navigation.about}
               </Link>
             </li>
@@ -146,7 +148,7 @@ function Header() {
                 {services.map((service, index) => (
                   <Link 
                     key={index} 
-                    to={service.href} 
+                    href={service.href} 
                     className="mobile-dropdown-item"
                     onClick={closeMobileMenu}
                   >
@@ -156,17 +158,22 @@ function Header() {
               </div>
             </li>
             <li>
-              <Link to="/careers" className="mobile-nav-link" onClick={closeMobileMenu}>
+              <Link href="/careers" className="mobile-nav-link" onClick={closeMobileMenu}>
                 {homeCopy.header.navigation.careers}
               </Link>
             </li>
             <li>
-              <a href="/blogs" className="mobile-nav-link" onClick={closeMobileMenu}>
+              <Link href="/blogs" className="mobile-nav-link" onClick={closeMobileMenu}>
                 {homeCopy.header.navigation.blog}
-              </a>
+              </Link>
             </li>
             <li>
-              <Link to="/refer-us" className="mobile-nav-link" onClick={closeMobileMenu}>
+              <Link href="/locations" className="mobile-nav-link" onClick={closeMobileMenu}>
+                Service Areas
+              </Link>
+            </li>
+            <li>
+              <Link href="/refer-us" className="mobile-nav-link" onClick={closeMobileMenu}>
                 {homeCopy.header.navigation.referUs}
               </Link>
             </li>
@@ -174,10 +181,10 @@ function Header() {
 
           {/* Mobile CTA Buttons */}
           <div className="mobile-cta-buttons">
-            <Link to="/contact" className="mobile-cta-btn primary" onClick={closeMobileMenu}>
+            <Link href="/contact" className="mobile-cta-btn primary" onClick={closeMobileMenu}>
               {homeCopy.header.ctaButtons.contactUs}
             </Link>
-            <Link to="/scheduling" className="mobile-cta-btn secondary" onClick={closeMobileMenu}>
+            <Link href="/scheduling" className="mobile-cta-btn secondary" onClick={closeMobileMenu}>
               {homeCopy.header.ctaButtons.scheduleCare}
             </Link>
           </div>

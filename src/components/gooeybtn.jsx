@@ -1,3 +1,5 @@
+'use client'
+
 import './gooeybtn.css'
 
 function GooeyBtn({text, variant = 'black', extendby = 0, direction = 'right'}) {

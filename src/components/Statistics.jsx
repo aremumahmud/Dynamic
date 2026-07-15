@@ -1,3 +1,5 @@
+'use client'
+
 import './Statistics.css'
 import { useState, useEffect } from 'react'
 import homeCopy from '../../copy/home.json'

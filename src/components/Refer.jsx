@@ -1,5 +1,7 @@
+'use client'
+
 import './Refer.css'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import homeCopy from '../../copy/home.json'
 
 function Refer() {
@@ -44,7 +46,7 @@ function Refer() {
                         </div>
 
                         <div className="refer-cta" data-aos="fade-up" data-aos-delay="800">
-                            <Link to="/refer-us" className="refer-button">
+                            <Link href="/refer-us" className="refer-button">
                                 {homeCopy.refer.ctaButton}
                             </Link>
                         </div>

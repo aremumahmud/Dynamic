@@ -1,10 +1,29 @@
+'use client'
+
 import './Footer.css'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import homeCopy from '../../copy/home.json'
+import { servicesList } from '../data/servicesData'
+import { locationsList } from '../data/locationsData'
+
+const QUICK_LINK_HREFS = {
+    'About Us': '/about',
+    'Our Services': '/services',
+    'Careers': '/careers',
+    'Blog': '/blogs',
+    'Contact': '/contact',
+    'Refer Us': '/refer-us',
+}
+
+const LEGAL_LINK_HREFS = {
+    'Privacy Policy': '/privacy-policy',
+    'Terms & Conditions': '/terms',
+}
 
 function Footer() {
     const [email, setEmail] = useState('');
+    const featuredLocations = locationsList.slice(0, 6);
 
     const handleNewsletterSubmit = (e) => {
         e.preventDefault();
@@ -39,12 +58,12 @@ function Footer() {
                     <div className="footer-section">
                         <h4 className="footer-heading">{homeCopy.footer.sections.ourServices.title}</h4>
                         <ul className="footer-links">
-                            {homeCopy.footer.sections.ourServices.links.map((link, index) => (
-                                <li key={index}><a href="#services">{link}</a></li>
+                            {servicesList.map((service) => (
+                                <li key={service.id}><Link href={`/services/${service.id}`}>{service.name}</Link></li>
                             ))}
                         </ul>
                         <div className="footer-cta">
-                            <a href="/scheduling" className="schedule-btn">{homeCopy.footer.sections.ourServices.ctaButton}</a>
+                            <Link href="/scheduling" className="schedule-btn">{homeCopy.footer.sections.ourServices.ctaButton}</Link>
                         </div>
                     </div>
 
@@ -54,19 +73,28 @@ function Footer() {
                         <ul className="footer-links">
                             {homeCopy.footer.sections.quickLinks.links.map((link, index) => (
                                 <li key={index}>
-                                    {link === "Refer Us" ? (
-                                        <Link to="/refer-us">{link}</Link>
-                                    ) : (
-                                        <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}>{link}</a>
-                                    )}
+                                    <Link href={QUICK_LINK_HREFS[link] || '/'}>{link}</Link>
                                 </li>
                             ))}
                         </ul>
                         <h4 className="footer-heading legal-heading">{homeCopy.footer.sections.legal.title}</h4>
                         <ul className="footer-links">
                             {homeCopy.footer.sections.legal.links.map((link, index) => (
-                                <li key={index}><a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}>{link}</a></li>
+                                <li key={index}><Link href={LEGAL_LINK_HREFS[link] || '/'}>{link}</Link></li>
                             ))}
+                        </ul>
+                    </div>
+
+                    {/* Service Areas */}
+                    <div className="footer-section">
+                        <h4 className="footer-heading">Service Areas</h4>
+                        <ul className="footer-links">
+                            {featuredLocations.map((location) => (
+                                <li key={location.slug}>
+                                    <Link href={`/locations/${location.slug}`}>{location.name}, TX</Link>
+                                </li>
+                            ))}
+                            <li><Link href="/locations">View All Service Areas</Link></li>
                         </ul>
                     </div>
 

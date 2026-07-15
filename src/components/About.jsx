@@ -1,3 +1,5 @@
+'use client'
+
 import './About.css'
 import homeCopy from '../../copy/home.json'
 

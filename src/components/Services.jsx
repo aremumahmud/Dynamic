@@ -1,5 +1,7 @@
+'use client'
+
 import './Services.css'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import homeCopy from '../../copy/home.json'
 
 function Services() {
@@ -62,7 +64,7 @@ function Services() {
                                         </div>
                                     </div> */}
                                     
-                                    <Link to={`/services/${service.serviceId}`} className="service-btn">
+                                    <Link href={`/services/${service.serviceId}`} className="service-btn">
                                         <span>{homeCopy.services.learnMoreButton}</span>
                                         <i className="btn-icon">→</i>
                                     </Link>
@@ -77,7 +79,7 @@ function Services() {
                     <p className="cta-description">
                         {homeCopy.services.ctaSection.description}
                     </p>
-                    <Link to="/scheduling" className="cta-button">
+                    <Link href="/scheduling" className="cta-button">
                         {homeCopy.services.ctaSection.button}
                     </Link>
                 </div>

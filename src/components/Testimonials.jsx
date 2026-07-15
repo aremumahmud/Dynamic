@@ -1,18 +1,32 @@
+'use client'
+
 import './Testimonials.css'
 import { useState, useEffect } from 'react'
 import homeCopy from '../../copy/home.json'
+import JsonLd from './JsonLd'
+import { reviewSchema } from '../lib/schema'
 
 function Testimonials() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [itemsPerSlide, setItemsPerSlide] = useState(3);
 
+    const getInitials = (name) => {
+        return name
+            .split(' ')
+            .filter(Boolean)
+            .map((part) => part[0])
+            .join('')
+            .slice(0, 2)
+            .toUpperCase();
+    };
+
     const testimonials = homeCopy.testimonials.testimonials.map((testimonial, index) => ({
         id: index + 1,
         feedback: testimonial.feedback,
         name: testimonial.name,
         location: testimonial.location,
-        image: homeCopy.images.testimonials.profileImages[index]
+        initials: getInitials(testimonial.name)
     }));
 
     const totalSlides = Math.ceil(testimonials.length / itemsPerSlide);
@@ -79,6 +93,7 @@ function Testimonials() {
 
     return (
         <section className="testimonials-section">
+            <JsonLd data={reviewSchema(testimonials)} />
             <div className="testimonials-container">
                 <div className="testimonials-header" data-aos="fade-up">
                     <div className="testimonials-badge">{homeCopy.testimonials.badge}</div>
@@ -116,11 +131,9 @@ function Testimonials() {
                                                 
                                                 <div className="testimonial-footer">
                                                     <div className="client-profile">
-                                                        <img 
-                                                            src={testimonial.image} 
-                                                            alt={testimonial.name}
-                                                            className="client-avatar"
-                                                        />
+                                                        <div className="client-avatar client-avatar-initials" aria-hidden="true">
+                                                            {testimonial.initials}
+                                                        </div>
                                                         <div className="client-info">
                                                             <h4 className="client-name">{testimonial.name}</h4>
                                                             <p className="client-location">{testimonial.location}</p>

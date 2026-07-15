@@ -162,6 +162,18 @@
   box-shadow: var(--shadow-md);
 }
 
+.client-avatar-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-secondary-500));
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
 .client-info {
   text-align: left;
   flex: 1;

@@ -1,3 +1,5 @@
+'use client'
+
 import './Newsletter.css'
 import { useState, useEffect, useRef } from 'react'
 import emailService from '../services/emailService'

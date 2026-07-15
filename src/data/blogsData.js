@@ -1,4 +1,4 @@
-import homeCopy from '../../copy/home.json'
+import homeCopy from '../../copy/home.json' with { type: 'json' }
 
 export const blogCategories = [
     'All',

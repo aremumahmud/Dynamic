@@ -1,7 +1,11 @@
+'use client'
+
 import './FAQ.css'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import homeCopy from '../../copy/home.json'
+import JsonLd from './JsonLd'
+import { faqSchema } from '../lib/schema'
 
 function FAQ() {
     const [openItem, setOpenItem] = useState(null);
@@ -18,6 +22,7 @@ function FAQ() {
 
     return (
         <section className="faq-section">
+            <JsonLd data={faqSchema(faqs)} />
             <div className="faq-container">
                 <div className="faq-header" data-aos="fade-up">
                     <div className="faq-badge">{homeCopy.faq.badge}</div>
@@ -58,7 +63,7 @@ function FAQ() {
                     <div className="faq-cta">
                         <h3>{homeCopy.faq.ctaSection.title}</h3>
                         <p>{homeCopy.faq.ctaSection.description}</p>
-                        <Link to="/contact" className="faq-contact-btn">
+                        <Link href="/contact" className="faq-contact-btn">
                             {homeCopy.faq.ctaSection.button}
                         </Link>
                     </div>

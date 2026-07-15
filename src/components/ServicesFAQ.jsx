@@ -1,5 +1,9 @@
+'use client'
+
 import './ServicesFAQ.css'
 import { useState } from 'react'
+import JsonLd from './JsonLd'
+import { faqSchema } from '../lib/schema'
 
 function ServicesFAQ() {
     const [openItem, setOpenItem] = useState(null);
@@ -43,6 +47,7 @@ function ServicesFAQ() {
 
     return (
         <section className="services-faq-section">
+            <JsonLd data={faqSchema(servicesFaqs)} />
             <div className="services-faq-container">
                 <div className="services-faq-header" data-aos="fade-up">
                     <div className="services-faq-badge">Services FAQ</div>

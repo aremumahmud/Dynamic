@@ -1,5 +1,7 @@
+'use client'
+
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import GooeyBtn from './gooeybtn'
 import './hero.css'
 import { BsArrowUpRight, BsArrowUpLeft } from 'react-icons/bs'
@@ -55,7 +57,7 @@ function Hero() {
                     </div>
 
                     <div className="cta-buttons" data-aos="fade-up" data-aos-delay="500">
-                        <Link to="/scheduling">
+                        <Link href="/scheduling">
                             <GooeyBtn extendby={220} direction="left" text={homeCopy.hero.ctaButton} />
                         </Link>
                     </div>
