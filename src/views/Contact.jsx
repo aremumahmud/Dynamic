@@ -8,6 +8,7 @@ import FAQ from '../components/FAQ'
 import Breadcrumbs from '../components/Breadcrumbs'
 import emailService from '../services/emailService'
 import contactCopy from '../../copy/contact.json'
+import { isValidEmail, isValidPhone, isBlank, focusFirstError } from '../lib/formValidation'
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -19,6 +20,7 @@ function Contact() {
         message: ''
     });
 
+    const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const successMessageRef = useRef(null);
@@ -44,12 +46,45 @@ function Contact() {
             ...prev,
             [name]: value
         }));
+        if (errors[name]) {
+            setErrors(prev => {
+                const next = { ...prev };
+                delete next[name];
+                return next;
+            });
+        }
+    };
+
+    const validate = () => {
+        const nextErrors = {};
+        if (isBlank(formData.name)) nextErrors.name = 'Name is required';
+        if (isBlank(formData.email)) {
+            nextErrors.email = 'Email is required';
+        } else if (!isValidEmail(formData.email)) {
+            nextErrors.email = 'Enter a valid email address';
+        }
+        if (isBlank(formData.phone)) {
+            nextErrors.phone = 'Phone number is required';
+        } else if (!isValidPhone(formData.phone)) {
+            nextErrors.phone = 'Enter a valid phone number';
+        }
+        if (isBlank(formData.urgency)) nextErrors.urgency = 'Please select an urgency level';
+        if (isBlank(formData.message)) nextErrors.message = 'Message is required';
+        return nextErrors;
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const validationErrors = validate();
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            focusFirstError(validationErrors);
+            return;
+        }
+        setErrors({});
         setIsSubmitting(true);
-        
+
         try {
             // Send admin notification email
             const adminResult = await emailService.sendContactFormEmail(formData);
@@ -204,7 +239,7 @@ function Contact() {
                                 </div>
                             )}
 
-                            <form className="contact-form" onSubmit={handleSubmit}>
+                            <form className="contact-form" onSubmit={handleSubmit} noValidate>
                                 <div className="form-row">
                                     <div className="form-group">
                                         <label htmlFor="name">{contactCopy.contactForm.fields.name.label}</label>
@@ -214,10 +249,12 @@ function Contact() {
                                             name="name"
                                             value={formData.name}
                                             onChange={handleInputChange}
-                                            required
+                                            className={errors.name ? 'field-invalid' : ''}
+                                            aria-invalid={Boolean(errors.name)}
                                             placeholder={contactCopy.contactForm.fields.name.placeholder}
                                             disabled={isSubmitting}
                                         />
+                                        {errors.name && <p className="field-error-message">{errors.name}</p>}
                                     </div>
 
                                     <div className="form-group">
@@ -228,10 +265,12 @@ function Contact() {
                                             name="email"
                                             value={formData.email}
                                             onChange={handleInputChange}
-                                            required
+                                            className={errors.email ? 'field-invalid' : ''}
+                                            aria-invalid={Boolean(errors.email)}
                                             placeholder={contactCopy.contactForm.fields.email.placeholder}
                                             disabled={isSubmitting}
                                         />
+                                        {errors.email && <p className="field-error-message">{errors.email}</p>}
                                     </div>
                                 </div>
 
@@ -244,9 +283,12 @@ function Contact() {
                                             name="phone"
                                             value={formData.phone}
                                             onChange={handleInputChange}
+                                            className={errors.phone ? 'field-invalid' : ''}
+                                            aria-invalid={Boolean(errors.phone)}
                                             placeholder={contactCopy.contactForm.fields.phone.placeholder}
                                             disabled={isSubmitting}
                                         />
+                                        {errors.phone && <p className="field-error-message">{errors.phone}</p>}
                                     </div>
 
                                     <div className="form-group">
@@ -256,7 +298,8 @@ function Contact() {
                                             name="urgency"
                                             value={formData.urgency}
                                             onChange={handleInputChange}
-                                            required
+                                            className={errors.urgency ? 'field-invalid' : ''}
+                                            aria-invalid={Boolean(errors.urgency)}
                                             disabled={isSubmitting}
                                         >
                                             <option value="">{contactCopy.contactForm.fields.urgency.placeholder}</option>
@@ -266,6 +309,7 @@ function Contact() {
                                                 </option>
                                             ))}
                                         </select>
+                                        {errors.urgency && <p className="field-error-message">{errors.urgency}</p>}
                                     </div>
                                 </div>
 
@@ -294,11 +338,13 @@ function Contact() {
                                         name="message"
                                         value={formData.message}
                                         onChange={handleInputChange}
-                                        required
+                                        className={errors.message ? 'field-invalid' : ''}
+                                        aria-invalid={Boolean(errors.message)}
                                         rows="6"
                                         placeholder={contactCopy.contactForm.fields.message.placeholder}
                                         disabled={isSubmitting}
                                     ></textarea>
+                                    {errors.message && <p className="field-error-message">{errors.message}</p>}
                                 </div>
 
                                 <button 

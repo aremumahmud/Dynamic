@@ -8,6 +8,7 @@ import FAQ from '../components/FAQ'
 import Breadcrumbs from '../components/Breadcrumbs'
 import emailService from '../services/emailService'
 import referUsCopy from '../../copy/referUs.json'
+import { isValidEmail, isValidPhone, isBlank, focusFirstError } from '../lib/formValidation'
 
 function ReferUs() {
     const [formData, setFormData] = useState({
@@ -25,6 +26,7 @@ function ReferUs() {
         agreeToTerms: false
     });
 
+    const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const successMessageRef = useRef(null);
@@ -50,12 +52,55 @@ function ReferUs() {
             ...prev,
             [name]: type === 'checkbox' ? checked : value
         }));
+        if (errors[name]) {
+            setErrors(prev => {
+                const next = { ...prev };
+                delete next[name];
+                return next;
+            });
+        }
+    };
+
+    const validate = () => {
+        const nextErrors = {};
+        if (isBlank(formData.referrerName)) nextErrors.referrerName = 'Your name is required';
+        if (isBlank(formData.referrerEmail)) {
+            nextErrors.referrerEmail = 'Your email is required';
+        } else if (!isValidEmail(formData.referrerEmail)) {
+            nextErrors.referrerEmail = 'Enter a valid email address';
+        }
+        if (isBlank(formData.referrerPhone)) {
+            nextErrors.referrerPhone = 'Your phone number is required';
+        } else if (!isValidPhone(formData.referrerPhone)) {
+            nextErrors.referrerPhone = 'Enter a valid phone number';
+        }
+        if (isBlank(formData.referrerRelation)) nextErrors.referrerRelation = 'Please select your relationship';
+        if (isBlank(formData.clientName)) nextErrors.clientName = "Client's name is required";
+        if (isBlank(formData.clientPhone)) {
+            nextErrors.clientPhone = "Client's phone number is required";
+        } else if (!isValidPhone(formData.clientPhone)) {
+            nextErrors.clientPhone = 'Enter a valid phone number';
+        }
+        if (!isBlank(formData.clientEmail) && !isValidEmail(formData.clientEmail)) {
+            nextErrors.clientEmail = 'Enter a valid email address';
+        }
+        if (isBlank(formData.urgency)) nextErrors.urgency = 'Please select an urgency level';
+        if (!formData.agreeToTerms) nextErrors.agreeToTerms = 'You must agree before submitting';
+        return nextErrors;
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const validationErrors = validate();
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            focusFirstError(validationErrors);
+            return;
+        }
+        setErrors({});
         setIsSubmitting(true);
-        
+
         try {
             // Send admin notification email
             const adminResult = await emailService.sendReferralFormEmail(formData);
@@ -208,12 +253,12 @@ function ReferUs() {
                         </div>
                     )}
 
-                    <form className="referral-form" onSubmit={handleSubmit} data-aos="fade-up" data-aos-delay="200">
+                    <form className="referral-form" onSubmit={handleSubmit} data-aos="fade-up" data-aos-delay="200" noValidate>
                         {/* Your Information Section */}
                         <div className="form-section">
                             <h3 className="form-section-title">{referUsCopy.referralForm.sections.yourInformation.title}</h3>
                             <p className="form-section-subtitle">{referUsCopy.referralForm.sections.yourInformation.subtitle}</p>
-                            
+
                             <div className="form-row">
                                 <div className="form-group">
                                     <label htmlFor="referrerName">{referUsCopy.referralForm.sections.yourInformation.fields.referrerName.label}</label>
@@ -223,10 +268,12 @@ function ReferUs() {
                                         name="referrerName"
                                         value={formData.referrerName}
                                         onChange={handleInputChange}
-                                        required
+                                        className={errors.referrerName ? 'field-invalid' : ''}
+                                        aria-invalid={Boolean(errors.referrerName)}
                                         placeholder={referUsCopy.referralForm.sections.yourInformation.fields.referrerName.placeholder}
                                         disabled={isSubmitting}
                                     />
+                                    {errors.referrerName && <p className="field-error-message">{errors.referrerName}</p>}
                                 </div>
 
                                 <div className="form-group">
@@ -237,10 +284,12 @@ function ReferUs() {
                                         name="referrerEmail"
                                         value={formData.referrerEmail}
                                         onChange={handleInputChange}
-                                        required
+                                        className={errors.referrerEmail ? 'field-invalid' : ''}
+                                        aria-invalid={Boolean(errors.referrerEmail)}
                                         placeholder={referUsCopy.referralForm.sections.yourInformation.fields.referrerEmail.placeholder}
                                         disabled={isSubmitting}
                                     />
+                                    {errors.referrerEmail && <p className="field-error-message">{errors.referrerEmail}</p>}
                                 </div>
                             </div>
 
@@ -253,9 +302,12 @@ function ReferUs() {
                                         name="referrerPhone"
                                         value={formData.referrerPhone}
                                         onChange={handleInputChange}
+                                        className={errors.referrerPhone ? 'field-invalid' : ''}
+                                        aria-invalid={Boolean(errors.referrerPhone)}
                                         placeholder={referUsCopy.referralForm.sections.yourInformation.fields.referrerPhone.placeholder}
                                         disabled={isSubmitting}
                                     />
+                                    {errors.referrerPhone && <p className="field-error-message">{errors.referrerPhone}</p>}
                                 </div>
 
                                 <div className="form-group">
@@ -265,7 +317,8 @@ function ReferUs() {
                                         name="referrerRelation"
                                         value={formData.referrerRelation}
                                         onChange={handleInputChange}
-                                        required
+                                        className={errors.referrerRelation ? 'field-invalid' : ''}
+                                        aria-invalid={Boolean(errors.referrerRelation)}
                                         disabled={isSubmitting}
                                     >
                                         <option value="">{referUsCopy.referralForm.sections.yourInformation.fields.referrerRelation.placeholder}</option>
@@ -275,6 +328,7 @@ function ReferUs() {
                                             </option>
                                         ))}
                                     </select>
+                                    {errors.referrerRelation && <p className="field-error-message">{errors.referrerRelation}</p>}
                                 </div>
                             </div>
                         </div>
@@ -283,7 +337,7 @@ function ReferUs() {
                         <div className="form-section">
                             <h3 className="form-section-title">{referUsCopy.referralForm.sections.clientInformation.title}</h3>
                             <p className="form-section-subtitle">{referUsCopy.referralForm.sections.clientInformation.subtitle}</p>
-                            
+
                             <div className="form-row">
                                 <div className="form-group">
                                     <label htmlFor="clientName">{referUsCopy.referralForm.sections.clientInformation.fields.clientName.label}</label>
@@ -293,10 +347,12 @@ function ReferUs() {
                                         name="clientName"
                                         value={formData.clientName}
                                         onChange={handleInputChange}
-                                        required
+                                        className={errors.clientName ? 'field-invalid' : ''}
+                                        aria-invalid={Boolean(errors.clientName)}
                                         placeholder={referUsCopy.referralForm.sections.clientInformation.fields.clientName.placeholder}
                                         disabled={isSubmitting}
                                     />
+                                    {errors.clientName && <p className="field-error-message">{errors.clientName}</p>}
                                 </div>
 
                                 <div className="form-group">
@@ -307,10 +363,12 @@ function ReferUs() {
                                         name="clientPhone"
                                         value={formData.clientPhone}
                                         onChange={handleInputChange}
-                                        required
+                                        className={errors.clientPhone ? 'field-invalid' : ''}
+                                        aria-invalid={Boolean(errors.clientPhone)}
                                         placeholder={referUsCopy.referralForm.sections.clientInformation.fields.clientPhone.placeholder}
                                         disabled={isSubmitting}
                                     />
+                                    {errors.clientPhone && <p className="field-error-message">{errors.clientPhone}</p>}
                                 </div>
                             </div>
 
@@ -323,9 +381,12 @@ function ReferUs() {
                                         name="clientEmail"
                                         value={formData.clientEmail}
                                         onChange={handleInputChange}
+                                        className={errors.clientEmail ? 'field-invalid' : ''}
+                                        aria-invalid={Boolean(errors.clientEmail)}
                                         placeholder={referUsCopy.referralForm.sections.clientInformation.fields.clientEmail.placeholder}
                                         disabled={isSubmitting}
                                     />
+                                    {errors.clientEmail && <p className="field-error-message">{errors.clientEmail}</p>}
                                 </div>
 
                                 <div className="form-group">
@@ -335,7 +396,8 @@ function ReferUs() {
                                         name="urgency"
                                         value={formData.urgency}
                                         onChange={handleInputChange}
-                                        required
+                                        className={errors.urgency ? 'field-invalid' : ''}
+                                        aria-invalid={Boolean(errors.urgency)}
                                         disabled={isSubmitting}
                                     >
                                         <option value="">{referUsCopy.referralForm.sections.clientInformation.fields.urgency.placeholder}</option>
@@ -345,6 +407,7 @@ function ReferUs() {
                                             </option>
                                         ))}
                                     </select>
+                                    {errors.urgency && <p className="field-error-message">{errors.urgency}</p>}
                                 </div>
                             </div>
 

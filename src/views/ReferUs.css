@@ -396,6 +396,18 @@
   background-color: var(--bg-primary);
 }
 
+.form-group input.field-invalid,
+.form-group select.field-invalid,
+.form-group textarea.field-invalid {
+  border-color: #dc3545;
+}
+
+.field-error-message {
+  color: #dc3545;
+  font-size: 13px;
+  margin: 2px 0 0;
+}
+
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
