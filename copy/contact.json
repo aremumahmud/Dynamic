@@ -70,7 +70,7 @@
         "placeholder": "Enter your email"
       },
       "phone": {
-        "label": "Phone Number",
+        "label": "Phone Number *",
         "placeholder": "Enter your phone number"
       },
       "urgency": {

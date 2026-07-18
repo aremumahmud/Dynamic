@@ -30,7 +30,7 @@ main, .main-content, .page-content {
 }
 
 /* Page wrapper spacing */
-.services-page, .refer-us-page, .contact-page, .scheduling-page, .blogs-page, .careers-page, .about-page, .job-detail-page, .careers-hero,.services-hero, .about-hero,.scheduling-hero {
+.services-page, .refer-us-page, .contact-page, .scheduling-page, .blogs-page, .careers-page, .about-page, .job-detail-page {
   margin-top: 80px !important; /* Account for fixed header */
 }
 a{
